@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'RxCoreMotion_Example', :exclusive => true do
+  platform :ios, '8.0'
+  pod 'RxCoreMotion', :path => '../'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+end
+
+target 'RxCoreMotion_Tests', :exclusive => true do
+  pod 'RxTests'
+end
