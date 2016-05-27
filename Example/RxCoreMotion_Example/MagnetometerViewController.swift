@@ -14,7 +14,7 @@ import RxCoreMotion
 class MagnetometerViewController: UIViewController {
     
     let disposeBag = DisposeBag()
-    let coreMotionManager = RxCoreMotionManager()
+    let coreMotionManager = CMMotionManager.rx_manager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +23,11 @@ class MagnetometerViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-        coreMotionManager.magneticField
+
+        coreMotionManager
+            .flatMap { manager in
+                manager.rx_magneticField
+            }
             .observeOn(MainScheduler.instance)
             .subscribeNext { [weak self] magneticField in
                 print(self)
