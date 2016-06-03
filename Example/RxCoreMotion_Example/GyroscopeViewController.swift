@@ -26,8 +26,8 @@ class GyroscopeViewController: UIViewController {
         super.viewDidAppear(animated)
         
         coreMotionManager
-            .flatMap { manager in
-                return manager.rx_rotationRate
+            .flatMapLatest { manager in
+                manager.rotationRate ?? Observable.empty()
             }
             .observeOn(MainScheduler.instance)
             .subscribeNext { [weak self] rotationRate in

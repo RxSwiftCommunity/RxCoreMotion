@@ -9,11 +9,11 @@ import CoreMotion
 import RxSwift
 
 extension CMMotionManager {
-    static public func rx_manager(createMotionManager: () throws -> CMMotionManager = { CMMotionManager() }) -> Observable<CMMotionManager> {
+    static public func rx_manager(createMotionManager: () throws -> CMMotionManager = { CMMotionManager() }) -> Observable<MotionManager> {
         return Observable.create { observer in
             do {
                 let motionManager = try createMotionManager()
-                observer.on(.Next(motionManager))
+                observer.on(.Next(MotionManager(motionManager: motionManager)))
             }
             catch let e {
                 observer.on(.Error(e))
@@ -136,5 +136,43 @@ extension CMMotionManager {
         objc_setAssociatedObject(self, key, sequence, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
 
         return sequence
+    }
+}
+
+// If the current device supports one of the capabilities, observable sequence will not be nil
+public struct MotionManager {
+    public let acceleration: Observable<CMAcceleration>?
+    public let rotationRate: Observable<CMRotationRate>?
+    public let magneticField: Observable<CMMagneticField>?
+    public let deviceMotion: Observable<CMDeviceMotion>?
+
+    private init(motionManager: CMMotionManager) {
+        if motionManager.accelerometerAvailable {
+            self.acceleration = motionManager.rx_acceleration
+        }
+        else {
+            self.acceleration = nil
+        }
+
+        if motionManager.gyroAvailable {
+            self.rotationRate = motionManager.rx_rotationRate
+        }
+        else {
+            self.rotationRate = nil
+        }
+
+        if motionManager.magnetometerAvailable {
+            self.magneticField = motionManager.rx_magneticField
+        }
+        else {
+            self.magneticField = nil
+        }
+
+        if motionManager.deviceMotionAvailable {
+            self.deviceMotion = motionManager.rx_deviceMotion
+        }
+        else {
+            self.deviceMotion = nil
+        }
     }
 }

@@ -25,8 +25,8 @@ class MagnetometerViewController: UIViewController {
         super.viewDidAppear(animated)
 
         coreMotionManager
-            .flatMap { manager in
-                manager.rx_magneticField
+            .flatMapLatest { manager in
+                manager.magneticField ?? Observable.empty()
             }
             .observeOn(MainScheduler.instance)
             .subscribeNext { [weak self] magneticField in
