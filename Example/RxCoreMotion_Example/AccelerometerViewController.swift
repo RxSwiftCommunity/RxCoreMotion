@@ -16,8 +16,8 @@ class AccelerometerViewController: UIViewController {
     @IBOutlet weak var grillageView: GrillageView!
     
     let disposeBag = DisposeBag()
-    let coreMotionManager = RxCoreMotionManager()
-    
+    let coreMotionManager = CMMotionManager.rx_manager()
+
     let circleView = RedCircleView()
     
     override func viewDidLoad() {
@@ -31,7 +31,10 @@ class AccelerometerViewController: UIViewController {
         let grillageCenter = grillageView.center
         circleView.center = grillageCenter
         
-        coreMotionManager.acceleration
+        coreMotionManager
+            .flatMapLatest { manager in
+                manager.acceleration ?? Observable.empty()
+            }
             .observeOn(MainScheduler.instance)
             .subscribeNext { [weak self] acceleration in
                 // translate 1G to 100 points

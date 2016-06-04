@@ -14,7 +14,7 @@ import RxCoreMotion
 class DeviceMotionViewController: UIViewController {
     
     let disposeBag = DisposeBag()
-    let coreMotionManager = RxCoreMotionManager()
+    let coreMotionManager = CMMotionManager.rx_manager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,10 @@ class DeviceMotionViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        coreMotionManager.deviceMotion
+        coreMotionManager
+            .flatMapLatest { manager in
+                manager.acceleration ?? Observable.empty()
+            }
             .observeOn(MainScheduler.instance)
             .subscribeNext { [weak self] deviceMotion in
                 print(self)

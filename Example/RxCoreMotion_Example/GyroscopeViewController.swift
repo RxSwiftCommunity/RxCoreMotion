@@ -14,7 +14,8 @@ import RxCoreMotion
 class GyroscopeViewController: UIViewController {
     
     let disposeBag = DisposeBag()
-    let coreMotionManager = RxCoreMotionManager()
+    let coreMotionManager = CMMotionManager.rx_manager()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,10 @@ class GyroscopeViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        coreMotionManager.rotationRate
+        coreMotionManager
+            .flatMapLatest { manager in
+                manager.rotationRate ?? Observable.empty()
+            }
             .observeOn(MainScheduler.instance)
             .subscribeNext { [weak self] rotationRate in
                 print(self)
