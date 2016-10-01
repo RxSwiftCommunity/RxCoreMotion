@@ -169,12 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 071AD5BA1CF171850058C7ED /* Build configuration list for PBXNativeTarget "RxCoreMotion_Example" */;
 			buildPhases = (
-				85FF176C93F6DC06523EEFF4 /* 📦 Check Pods Manifest.lock */,
+				85FF176C93F6DC06523EEFF4 /* [CP] Check Pods Manifest.lock */,
 				071AD5A41CF171850058C7ED /* Sources */,
 				071AD5A51CF171850058C7ED /* Frameworks */,
 				071AD5A61CF171850058C7ED /* Resources */,
-				2385F33ECC7CD3358914A1F2 /* 📦 Embed Pods Frameworks */,
-				35203272EC087686083FD68B /* 📦 Copy Pods Resources */,
+				2385F33ECC7CD3358914A1F2 /* [CP] Embed Pods Frameworks */,
+				35203272EC087686083FD68B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,12 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 071AD5C81CF171A00058C7ED /* Build configuration list for PBXNativeTarget "RxCoreMotion_Tests" */;
 			buildPhases = (
-				D25777B5FD2E5FC4C464B1E8 /* 📦 Check Pods Manifest.lock */,
+				D25777B5FD2E5FC4C464B1E8 /* [CP] Check Pods Manifest.lock */,
 				071AD5BD1CF171A00058C7ED /* Sources */,
 				071AD5BE1CF171A00058C7ED /* Frameworks */,
 				071AD5BF1CF171A00058C7ED /* Resources */,
-				BF4F1D072170C111C7986FE0 /* 📦 Embed Pods Frameworks */,
-				36F7F101EB981D1A25EB11C5 /* 📦 Copy Pods Resources */,
+				BF4F1D072170C111C7986FE0 /* [CP] Embed Pods Frameworks */,
+				36F7F101EB981D1A25EB11C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,14 +213,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "RxSwiftCommunity - https://github.com/RxSwiftCommunity";
 				TargetAttributes = {
 					071AD5A71CF171850058C7ED = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					071AD5C01CF171A00058C7ED = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 071AD5A71CF171850058C7ED;
 					};
 				};
@@ -265,14 +267,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2385F33ECC7CD3358914A1F2 /* 📦 Embed Pods Frameworks */ = {
+		2385F33ECC7CD3358914A1F2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,14 +282,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotion_Example/Pods-RxCoreMotion_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		35203272EC087686083FD68B /* 📦 Copy Pods Resources */ = {
+		35203272EC087686083FD68B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,14 +297,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotion_Example/Pods-RxCoreMotion_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		36F7F101EB981D1A25EB11C5 /* 📦 Copy Pods Resources */ = {
+		36F7F101EB981D1A25EB11C5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,14 +312,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotion_Tests/Pods-RxCoreMotion_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		85FF176C93F6DC06523EEFF4 /* 📦 Check Pods Manifest.lock */ = {
+		85FF176C93F6DC06523EEFF4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,14 +327,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		BF4F1D072170C111C7986FE0 /* 📦 Embed Pods Frameworks */ = {
+		BF4F1D072170C111C7986FE0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,14 +342,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotion_Tests/Pods-RxCoreMotion_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D25777B5FD2E5FC4C464B1E8 /* 📦 Check Pods Manifest.lock */ = {
+		D25777B5FD2E5FC4C464B1E8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,8 +427,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -470,8 +474,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -490,6 +496,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -498,11 +505,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82D1B14EC8220428CECA4EB4 /* Pods-RxCoreMotion_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RxCoreMotion_Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "es.cgn.RxCoreMotion-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -510,11 +519,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB583E326BC581E744589F42 /* Pods-RxCoreMotion_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RxCoreMotion_Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "es.cgn.RxCoreMotion-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -522,11 +533,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A1021F269966255AC7B53AA /* Pods-RxCoreMotion_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RxCoreMotion_Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "es.cgn.RxCoreMotion-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxCoreMotion_Example.app/RxCoreMotion_Example";
 			};
 			name = Debug;
@@ -535,11 +548,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07AAC472D888652212A9B7BF /* Pods-RxCoreMotion_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RxCoreMotion_Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "es.cgn.RxCoreMotion-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxCoreMotion_Example.app/RxCoreMotion_Example";
 			};
 			name = Release;

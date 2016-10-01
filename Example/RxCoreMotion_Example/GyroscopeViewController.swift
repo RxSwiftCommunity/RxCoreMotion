@@ -22,7 +22,7 @@ class GyroscopeViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         coreMotionManager
@@ -30,10 +30,10 @@ class GyroscopeViewController: UIViewController {
                 manager.rotationRate ?? Observable.empty()
             }
             .observeOn(MainScheduler.instance)
-            .subscribeNext { [weak self] rotationRate in
+            .subscribe(onNext: { [weak self] rotationRate in
                 print(self)
                 print(rotationRate)
-            }
+            })
             .addDisposableTo(disposeBag)
         
     }

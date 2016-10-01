@@ -21,7 +21,7 @@ class DeviceMotionViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         coreMotionManager
@@ -29,10 +29,10 @@ class DeviceMotionViewController: UIViewController {
                 manager.acceleration ?? Observable.empty()
             }
             .observeOn(MainScheduler.instance)
-            .subscribeNext { [weak self] deviceMotion in
+            .subscribe(onNext: { [weak self] deviceMotion in
                 print(self)
                 print(deviceMotion)
-            }
+            })
             .addDisposableTo(disposeBag)
         
     }

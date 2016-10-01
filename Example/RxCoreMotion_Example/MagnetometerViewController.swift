@@ -21,7 +21,7 @@ class MagnetometerViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         coreMotionManager
@@ -29,10 +29,10 @@ class MagnetometerViewController: UIViewController {
                 manager.magneticField ?? Observable.empty()
             }
             .observeOn(MainScheduler.instance)
-            .subscribeNext { [weak self] magneticField in
+            .subscribe(onNext: { [weak self] magneticField in
                 print(self)
                 print(magneticField)
-            }
+            })
             .addDisposableTo(disposeBag)
         
     }

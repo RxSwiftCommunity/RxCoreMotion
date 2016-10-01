@@ -25,7 +25,7 @@ class AccelerometerViewController: UIViewController {
         view.addSubview(circleView)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         let grillageCenter = grillageView.center
@@ -36,15 +36,16 @@ class AccelerometerViewController: UIViewController {
                 manager.acceleration ?? Observable.empty()
             }
             .observeOn(MainScheduler.instance)
-            .subscribeNext { [weak self] acceleration in
+            .subscribe(onNext: { [weak self] acceleration in
                 // translate 1G to 100 points
                 let xG = CGFloat(acceleration.x) * 100
                 let yG = -CGFloat(acceleration.y) * 100
                 
                 let xPos = grillageCenter.x + xG
                 let yPos = grillageCenter.y + yG
-                self?.circleView.center = CGPointMake(xPos, yPos)
-            }
+                
+                self?.circleView.center = CGPoint(x: xPos, y: yPos)
+            })
             .addDisposableTo(disposeBag)
         
     }

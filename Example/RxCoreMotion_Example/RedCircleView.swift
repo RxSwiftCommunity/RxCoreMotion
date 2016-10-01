@@ -11,8 +11,8 @@ import UIKit
 class RedCircleView: UIView {
 
     init() {
-        super.init(frame: CGRectMake(0.0, 0.0, 10.0, 10.0))
-        backgroundColor = UIColor.redColor()
+        super.init(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 10.0))
+        backgroundColor = UIColor.red
         layer.cornerRadius = 5.0
     }
     

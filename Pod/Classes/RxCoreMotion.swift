@@ -9,14 +9,14 @@ import CoreMotion
 import RxSwift
 
 extension CMMotionManager {
-    static public func rx_manager(createMotionManager: () throws -> CMMotionManager = { CMMotionManager() }) -> Observable<MotionManager> {
+    static public func rx_manager(createMotionManager: @escaping () throws -> CMMotionManager = { CMMotionManager() }) -> Observable<MotionManager> {
         return Observable.create { observer in
             do {
                 let motionManager = try createMotionManager()
-                observer.on(.Next(MotionManager(motionManager: motionManager)))
+                observer.on(.next(MotionManager(motionManager: motionManager)))
             }
             catch let e {
-                observer.on(.Error(e))
+                observer.on(.error(e))
             }
             return AnonymousDisposable {
             }
@@ -32,18 +32,18 @@ var deviceMotionKey: UInt8  = 0
 
 extension CMMotionManager {
     public var rx_acceleration: Observable<CMAcceleration> {
-        return memoize(&accelerationKey) {
+        return memoize(key: &accelerationKey) {
             Observable.create { [weak self] observer in
                 guard let motionManager = self else {
-                    observer.on(.Completed)
+                    observer.on(.completed)
                     return NopDisposable.instance
                 }
 
-                motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue(), withHandler: { (data: CMAccelerometerData?, error: NSError?) -> Void in
+                motionManager.startAccelerometerUpdates(to: OperationQueue(), withHandler: { (data: CMAccelerometerData?, error: Error?) -> Void in
                     guard let data = data else {
                         return
                     }
-                    observer.on(.Next(data.acceleration))
+                    observer.on(.next(data.acceleration))
                 })
 
                 return AnonymousDisposable {
@@ -55,18 +55,18 @@ extension CMMotionManager {
     }
     
     public var rx_rotationRate: Observable<CMRotationRate> {
-        return memoize(&rotationKey) {
+        return memoize(key: &rotationKey) {
             Observable.create { [weak self] observer in
                 guard let motionManager = self else {
-                    observer.on(.Completed)
+                    observer.on(.completed)
                     return NopDisposable.instance
                 }
 
-                motionManager.startGyroUpdatesToQueue(NSOperationQueue(), withHandler: { (data: CMGyroData?, error: NSError?) -> Void in
+                motionManager.startGyroUpdates(to: OperationQueue(), withHandler: { (data: CMGyroData?, error: Error?) -> Void in
                     guard let data = data else {
                         return
                     }
-                    observer.on(.Next(data.rotationRate))
+                    observer.on(.next(data.rotationRate))
                 })
 
                 return AnonymousDisposable {
@@ -78,18 +78,18 @@ extension CMMotionManager {
     }
     
     public var rx_magneticField: Observable<CMMagneticField> {
-        return memoize(&magneticFieldKey) {
+        return memoize(key: &magneticFieldKey) {
             Observable.create { [weak self] observer in
                 guard let motionManager = self else {
-                    observer.on(.Completed)
+                    observer.on(.completed)
                     return NopDisposable.instance
                 }
 
-                motionManager.startMagnetometerUpdatesToQueue(NSOperationQueue(), withHandler: { (data: CMMagnetometerData?, error: NSError?) -> Void in
+                motionManager.startMagnetometerUpdates(to: OperationQueue(), withHandler: { (data: CMMagnetometerData?, error: Error?) -> Void in
                     guard let data = data else {
                         return
                     }
-                    observer.on(.Next(data.magneticField))
+                    observer.on(.next(data.magneticField))
                 })
 
                 return AnonymousDisposable {
@@ -101,18 +101,18 @@ extension CMMotionManager {
     }
     
     public var rx_deviceMotion: Observable<CMDeviceMotion> {
-        return memoize(&deviceMotionKey) {
+        return memoize(key: &deviceMotionKey) {
             Observable.create { [weak self] observer in
                 guard let motionManager = self else {
-                    observer.on(.Completed)
+                    observer.on(.completed)
                     return NopDisposable.instance
                 }
 
-                motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue(), withHandler: { (data: CMDeviceMotion?, error: NSError?) -> Void in
+                motionManager.startDeviceMotionUpdates(to: OperationQueue(), withHandler: { (data: CMDeviceMotion?, error: Error?) -> Void in
                     guard let data = data else {
                         return
                     }
-                    observer.on(.Next(data))
+                    observer.on(.next(data))
                 })
 
                 return AnonymousDisposable {
@@ -146,29 +146,29 @@ public struct MotionManager {
     public let magneticField: Observable<CMMagneticField>?
     public let deviceMotion: Observable<CMDeviceMotion>?
 
-    private init(motionManager: CMMotionManager) {
-        if motionManager.accelerometerAvailable {
+    public init(motionManager: CMMotionManager) {
+        if motionManager.isAccelerometerAvailable {
             self.acceleration = motionManager.rx_acceleration
         }
         else {
             self.acceleration = nil
         }
 
-        if motionManager.gyroAvailable {
+        if motionManager.isGyroAvailable {
             self.rotationRate = motionManager.rx_rotationRate
         }
         else {
             self.rotationRate = nil
         }
 
-        if motionManager.magnetometerAvailable {
+        if motionManager.isMagnetometerAvailable {
             self.magneticField = motionManager.rx_magneticField
         }
         else {
             self.magneticField = nil
         }
 
-        if motionManager.deviceMotionAvailable {
+        if motionManager.isDeviceMotionAvailable {
             self.deviceMotion = motionManager.rx_deviceMotion
         }
         else {
