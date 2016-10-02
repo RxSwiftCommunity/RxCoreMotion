@@ -25,10 +25,12 @@ extension CMMotionManager {
 }
 
 
+
 var accelerationKey: UInt8  = 0
 var rotationKey: UInt8      = 0
 var magneticFieldKey: UInt8 = 0
 var deviceMotionKey: UInt8  = 0
+var pedometerKey: UInt8  = 0
 
 extension CMMotionManager {
     public var rx_acceleration: Observable<CMAcceleration> {
@@ -124,6 +126,7 @@ extension CMMotionManager {
     }
 }
 
+
 extension CMMotionManager {
     func memoize<D>(key: UnsafePointer<Void>, createLazily: () -> Observable<D>) -> Observable<D> {
         objc_sync_enter(self); defer { objc_sync_exit(self) }
@@ -139,13 +142,82 @@ extension CMMotionManager {
     }
 }
 
+extension CMPedometer {
+    public func rxPedometer(from: Date! = Date()) -> Observable<CMPedometerData> {
+        return memoize(key: &pedometerKey) {
+            Observable.create { [weak self] observer in
+                
+                guard let pedometer:CMPedometer = self else {
+                    observer.on(.completed)
+                    return NopDisposable.instance
+                }
+                pedometer.startUpdates(from: from, withHandler: {(data, error) in
+                    guard let data = data else {
+                        return
+                    }
+                    observer.on(.next(data))
+                })
+                return AnonymousDisposable {
+                    pedometer.stopUpdates()
+                    if #available(iOS 10.0, *) {
+                        pedometer.stopEventUpdates()
+                    }
+                }
+                }
+                .shareReplayLatestWhileConnected()
+        }
+    }
+    
+    
+    public var rx_pedometer: Observable<CMPedometerData> {
+        return memoize(key: &pedometerKey) {
+            Observable.create { [weak self] observer in
+                
+                guard let pedometer:CMPedometer = self else {
+                    observer.on(.completed)
+                    return NopDisposable.instance
+                }
+                pedometer.startUpdates(from: Date(), withHandler: {(data, error) in
+                    guard let data = data else {
+                        return
+                    }
+                    observer.on(.next(data))
+                })
+                return AnonymousDisposable {
+                    pedometer.stopUpdates()
+                    if #available(iOS 10.0, *) {
+                        pedometer.stopEventUpdates()
+                    }
+                }
+            }
+            .shareReplayLatestWhileConnected()
+        }
+    }
+    
+    func memoize<D>(key: UnsafePointer<Void>, createLazily: () -> Observable<D>) -> Observable<D> {
+        objc_sync_enter(self); defer { objc_sync_exit(self) }
+        
+        if let sequence = objc_getAssociatedObject(self, key) as? Observable<D> {
+            return sequence
+        }
+        
+        let sequence = createLazily()
+        objc_setAssociatedObject(self, key, sequence, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        
+        return sequence
+    }
+}
+
+
 // If the current device supports one of the capabilities, observable sequence will not be nil
 public struct MotionManager {
     public let acceleration: Observable<CMAcceleration>?
     public let rotationRate: Observable<CMRotationRate>?
     public let magneticField: Observable<CMMagneticField>?
     public let deviceMotion: Observable<CMDeviceMotion>?
-
+//    public let pedometer:Observable<CMPedometer>?
+    
+    
     public init(motionManager: CMMotionManager) {
         if motionManager.isAccelerometerAvailable {
             self.acceleration = motionManager.rx_acceleration
@@ -174,5 +246,10 @@ public struct MotionManager {
         else {
             self.deviceMotion = nil
         }
+        
+        
+//        if CMPedometer.isStepCountingAvailable() {
+//            self.pedometer
+//        }
     }
 }
