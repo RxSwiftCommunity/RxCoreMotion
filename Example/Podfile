@@ -11,13 +11,3 @@ target 'RxCoreMotion_Example' do
 target 'RxCoreMotion_Tests' do
   pod 'RxTest'
 end
-
-
-
-post_install do |installer|
-  installer.pods_project.build_configurations.each do |config|
-    # Configure Pod targets for Xcode 8 compatibility
-    config.build_settings['SWIFT_VERSION'] = '3.0'
-    config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
-  end
-end

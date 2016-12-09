@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { 'Carlos García' => 'carlosypunto@gmail.com' }
   s.source           = { 
-                          :git => "https://github.com/RxSwiftCommunity/RxCoreMotion.git"
+                          :git => "https://github.com/RxSwiftCommunity/RxCoreMotion.git",
                           :tag => s.version.to_s
                        }
 

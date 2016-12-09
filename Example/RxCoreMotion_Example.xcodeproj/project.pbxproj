@@ -19,8 +19,8 @@
 		075D29E41CF381ED005DC06D /* GyroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D29E31CF381ED005DC06D /* GyroscopeViewController.swift */; };
 		075D29E61CF39D22005DC06D /* MagnetometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D29E51CF39D22005DC06D /* MagnetometerViewController.swift */; };
 		075D29E81CF39D45005DC06D /* DeviceMotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D29E71CF39D45005DC06D /* DeviceMotionViewController.swift */; };
-		367C61A9537C1B8121F25C6E /* Pods_RxCoreMotion_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD018B15E6D8E8C2157CBF1 /* Pods_RxCoreMotion_Tests.framework */; };
-		83B19578575F5A4AA8710619 /* Pods_RxCoreMotion_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5643A294517BE7B4AEF73438 /* Pods_RxCoreMotion_Example.framework */; };
+		3590DF4C8191709DD36A2D04 /* Pods_RxCoreMotion_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38261AD32365B37A600AC37 /* Pods_RxCoreMotion_Tests.framework */; };
+		C0894FD7F5522000EDC55B35 /* Pods_RxCoreMotion_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42441AC75A1935FC0EB707DB /* Pods_RxCoreMotion_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01EF89E0743B2CEE209E997C /* Pods-RxCoreMotion_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCoreMotion_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxCoreMotion_Example/Pods-RxCoreMotion_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		071AD5A81CF171850058C7ED /* RxCoreMotion_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCoreMotion_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071AD5AB1CF171850058C7ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		071AD5AD1CF171850058C7ED /* SensorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsTableViewController.swift; sourceTree = "<group>"; };
@@ -50,12 +51,11 @@
 		075D29E31CF381ED005DC06D /* GyroscopeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GyroscopeViewController.swift; sourceTree = "<group>"; };
 		075D29E51CF39D22005DC06D /* MagnetometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnetometerViewController.swift; sourceTree = "<group>"; };
 		075D29E71CF39D45005DC06D /* DeviceMotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceMotionViewController.swift; sourceTree = "<group>"; };
-		07AAC472D888652212A9B7BF /* Pods-RxCoreMotion_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCoreMotion_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxCoreMotion_Tests/Pods-RxCoreMotion_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5643A294517BE7B4AEF73438 /* Pods_RxCoreMotion_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxCoreMotion_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		82D1B14EC8220428CECA4EB4 /* Pods-RxCoreMotion_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCoreMotion_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxCoreMotion_Example/Pods-RxCoreMotion_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		9A1021F269966255AC7B53AA /* Pods-RxCoreMotion_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCoreMotion_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxCoreMotion_Tests/Pods-RxCoreMotion_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		AFD018B15E6D8E8C2157CBF1 /* Pods_RxCoreMotion_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxCoreMotion_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB583E326BC581E744589F42 /* Pods-RxCoreMotion_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCoreMotion_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxCoreMotion_Example/Pods-RxCoreMotion_Example.release.xcconfig"; sourceTree = "<group>"; };
+		42441AC75A1935FC0EB707DB /* Pods_RxCoreMotion_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxCoreMotion_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		757FDB696EC6AC09C28FB3B7 /* Pods-RxCoreMotion_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCoreMotion_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxCoreMotion_Example/Pods-RxCoreMotion_Example.release.xcconfig"; sourceTree = "<group>"; };
+		AEC56E564FCB31F7D90B15DC /* Pods-RxCoreMotion_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCoreMotion_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxCoreMotion_Tests/Pods-RxCoreMotion_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C42F16B963E7D36F8EB9B5C2 /* Pods-RxCoreMotion_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCoreMotion_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxCoreMotion_Tests/Pods-RxCoreMotion_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E38261AD32365B37A600AC37 /* Pods_RxCoreMotion_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxCoreMotion_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83B19578575F5A4AA8710619 /* Pods_RxCoreMotion_Example.framework in Frameworks */,
+				C0894FD7F5522000EDC55B35 /* Pods_RxCoreMotion_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				367C61A9537C1B8121F25C6E /* Pods_RxCoreMotion_Tests.framework in Frameworks */,
+				3590DF4C8191709DD36A2D04 /* Pods_RxCoreMotion_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,8 +84,8 @@
 				071AD5AA1CF171850058C7ED /* RxCoreMotion_Example */,
 				071AD5C21CF171A00058C7ED /* RxCoreMotion_Tests */,
 				071AD5A91CF171850058C7ED /* Products */,
-				6B21BEF74F848D0B257829B8 /* Pods */,
-				396FB5CDAC8F6D5A33EB1C74 /* Frameworks */,
+				DAD9B114B8957570E0A6EAE3 /* Pods */,
+				788EF9CBABF5068261AC6651 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,22 +142,22 @@
 			name = ExamplesControllers;
 			sourceTree = "<group>";
 		};
-		396FB5CDAC8F6D5A33EB1C74 /* Frameworks */ = {
+		788EF9CBABF5068261AC6651 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5643A294517BE7B4AEF73438 /* Pods_RxCoreMotion_Example.framework */,
-				AFD018B15E6D8E8C2157CBF1 /* Pods_RxCoreMotion_Tests.framework */,
+				42441AC75A1935FC0EB707DB /* Pods_RxCoreMotion_Example.framework */,
+				E38261AD32365B37A600AC37 /* Pods_RxCoreMotion_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6B21BEF74F848D0B257829B8 /* Pods */ = {
+		DAD9B114B8957570E0A6EAE3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				82D1B14EC8220428CECA4EB4 /* Pods-RxCoreMotion_Example.debug.xcconfig */,
-				FB583E326BC581E744589F42 /* Pods-RxCoreMotion_Example.release.xcconfig */,
-				9A1021F269966255AC7B53AA /* Pods-RxCoreMotion_Tests.debug.xcconfig */,
-				07AAC472D888652212A9B7BF /* Pods-RxCoreMotion_Tests.release.xcconfig */,
+				01EF89E0743B2CEE209E997C /* Pods-RxCoreMotion_Example.debug.xcconfig */,
+				757FDB696EC6AC09C28FB3B7 /* Pods-RxCoreMotion_Example.release.xcconfig */,
+				C42F16B963E7D36F8EB9B5C2 /* Pods-RxCoreMotion_Tests.debug.xcconfig */,
+				AEC56E564FCB31F7D90B15DC /* Pods-RxCoreMotion_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -169,12 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 071AD5BA1CF171850058C7ED /* Build configuration list for PBXNativeTarget "RxCoreMotion_Example" */;
 			buildPhases = (
-				85FF176C93F6DC06523EEFF4 /* [CP] Check Pods Manifest.lock */,
+				FF18B8CEF99C5F0A7B2015C1 /* [CP] Check Pods Manifest.lock */,
 				071AD5A41CF171850058C7ED /* Sources */,
 				071AD5A51CF171850058C7ED /* Frameworks */,
 				071AD5A61CF171850058C7ED /* Resources */,
-				2385F33ECC7CD3358914A1F2 /* [CP] Embed Pods Frameworks */,
-				35203272EC087686083FD68B /* [CP] Copy Pods Resources */,
+				3CFF6A9F82D2B288875E589F /* [CP] Embed Pods Frameworks */,
+				D973785F8A9D08A4964FCF93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,12 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 071AD5C81CF171A00058C7ED /* Build configuration list for PBXNativeTarget "RxCoreMotion_Tests" */;
 			buildPhases = (
-				D25777B5FD2E5FC4C464B1E8 /* [CP] Check Pods Manifest.lock */,
+				8EE8319BCB59C5BB22BD83D1 /* [CP] Check Pods Manifest.lock */,
 				071AD5BD1CF171A00058C7ED /* Sources */,
 				071AD5BE1CF171A00058C7ED /* Frameworks */,
 				071AD5BF1CF171A00058C7ED /* Resources */,
-				BF4F1D072170C111C7986FE0 /* [CP] Embed Pods Frameworks */,
-				36F7F101EB981D1A25EB11C5 /* [CP] Copy Pods Resources */,
+				F1502964AC9A0B5D854A4E31 /* [CP] Embed Pods Frameworks */,
+				BC89939667E756CB0130A8D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,7 +267,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2385F33ECC7CD3358914A1F2 /* [CP] Embed Pods Frameworks */ = {
+		3CFF6A9F82D2B288875E589F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -282,37 +282,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotion_Example/Pods-RxCoreMotion_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		35203272EC087686083FD68B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotion_Example/Pods-RxCoreMotion_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		36F7F101EB981D1A25EB11C5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotion_Tests/Pods-RxCoreMotion_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		85FF176C93F6DC06523EEFF4 /* [CP] Check Pods Manifest.lock */ = {
+		8EE8319BCB59C5BB22BD83D1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,7 +297,37 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		BF4F1D072170C111C7986FE0 /* [CP] Embed Pods Frameworks */ = {
+		BC89939667E756CB0130A8D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotion_Tests/Pods-RxCoreMotion_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D973785F8A9D08A4964FCF93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotion_Example/Pods-RxCoreMotion_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1502964AC9A0B5D854A4E31 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -342,7 +342,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotion_Tests/Pods-RxCoreMotion_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D25777B5FD2E5FC4C464B1E8 /* [CP] Check Pods Manifest.lock */ = {
+		FF18B8CEF99C5F0A7B2015C1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -503,7 +503,7 @@
 		};
 		071AD5BB1CF171850058C7ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82D1B14EC8220428CECA4EB4 /* Pods-RxCoreMotion_Example.debug.xcconfig */;
+			baseConfigurationReference = 01EF89E0743B2CEE209E997C /* Pods-RxCoreMotion_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -518,7 +518,7 @@
 		};
 		071AD5BC1CF171850058C7ED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB583E326BC581E744589F42 /* Pods-RxCoreMotion_Example.release.xcconfig */;
+			baseConfigurationReference = 757FDB696EC6AC09C28FB3B7 /* Pods-RxCoreMotion_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -533,7 +533,7 @@
 		};
 		071AD5C91CF171A00058C7ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A1021F269966255AC7B53AA /* Pods-RxCoreMotion_Tests.debug.xcconfig */;
+			baseConfigurationReference = C42F16B963E7D36F8EB9B5C2 /* Pods-RxCoreMotion_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -548,7 +548,7 @@
 		};
 		071AD5CA1CF171A00058C7ED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07AAC472D888652212A9B7BF /* Pods-RxCoreMotion_Tests.release.xcconfig */;
+			baseConfigurationReference = AEC56E564FCB31F7D90B15DC /* Pods-RxCoreMotion_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";

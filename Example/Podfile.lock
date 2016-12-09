@@ -1,7 +1,7 @@
 PODS:
   - RxCocoa (3.0.1):
     - RxSwift (~> 3.0)
-  - RxCoreMotion (0.2.0):
+  - RxCoreMotion (0.3.0):
     - RxSwift
   - RxSwift (3.0.1)
   - RxTest (3.0.1):
@@ -19,10 +19,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
-  RxCoreMotion: 9243e94d6a74eb0702639c61d8b6d46a03fccb47
+  RxCoreMotion: 01ac701accdebd58a11b788dab4a7e8d897e8545
   RxSwift: af5680055c4ad04480189c52d28385b1029493a6
   RxTest: 9867e6f3c435af30fbdb44b6d8ec30b78c40b515
 
-PODFILE CHECKSUM: d6b21d56e46259dd7db4661f78ba811520c4be5c
+PODFILE CHECKSUM: a94a8fc7a917c3c2780f9b3dde1cb805c463321a
 
 COCOAPODS: 1.2.0.beta.1
