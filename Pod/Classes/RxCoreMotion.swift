@@ -54,7 +54,7 @@ extension CMMotionManager {
             .shareReplayLatestWhileConnected()
         }
     }
-    
+
     public var rx_rotationRate: Observable<CMRotationRate> {
         return memoize(key: &rotationKey) {
             Observable.create { [weak self] observer in
@@ -77,7 +77,7 @@ extension CMMotionManager {
             .shareReplayLatestWhileConnected()
         }
     }
-    
+
     public var rx_magneticField: Observable<CMMagneticField> {
         return memoize(key: &magneticFieldKey) {
             Observable.create { [weak self] observer in
@@ -100,7 +100,7 @@ extension CMMotionManager {
             .shareReplayLatestWhileConnected()
         }
     }
-    
+
     public var rx_deviceMotion: Observable<CMDeviceMotion> {
         return memoize(key: &deviceMotionKey) {
             Observable.create { [weak self] observer in
@@ -145,7 +145,7 @@ extension CMPedometer {
     public func rxPedometer(from: Date! = Date()) -> Observable<CMPedometerData> {
         return memoize(key: &pedometerKey) {
             Observable.create { [weak self] observer in
-                
+
                 guard let pedometer:CMPedometer = self else {
                     observer.on(.completed)
                     return Disposables.create()
@@ -166,12 +166,12 @@ extension CMPedometer {
                 .shareReplayLatestWhileConnected()
         }
     }
-    
-    
+
+
     public var rx_pedometer: Observable<CMPedometerData> {
         return memoize(key: &pedometerKey) {
             Observable.create { [weak self] observer in
-                
+
                 guard let pedometer:CMPedometer = self else {
                     observer.on(.completed)
                     return Disposables.create()
@@ -192,17 +192,17 @@ extension CMPedometer {
             .shareReplayLatestWhileConnected()
         }
     }
-    
+
     func memoize<D>(key: UnsafePointer<Void>, createLazily: () -> Observable<D>) -> Observable<D> {
         objc_sync_enter(self); defer { objc_sync_exit(self) }
-        
+
         if let sequence = objc_getAssociatedObject(self, key) as? Observable<D> {
             return sequence
         }
-        
+
         let sequence = createLazily()
         objc_setAssociatedObject(self, key, sequence, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        
+
         return sequence
     }
 }
@@ -214,9 +214,7 @@ public struct MotionManager {
     public let rotationRate: Observable<CMRotationRate>?
     public let magneticField: Observable<CMMagneticField>?
     public let deviceMotion: Observable<CMDeviceMotion>?
-//    public let pedometer:Observable<CMPedometer>?
-    
-    
+
     public init(motionManager: CMMotionManager) {
         if motionManager.isAccelerometerAvailable {
             self.acceleration = motionManager.rx_acceleration
@@ -245,10 +243,5 @@ public struct MotionManager {
         else {
             self.deviceMotion = nil
         }
-        
-        
-//        if CMPedometer.isStepCountingAvailable() {
-//            self.pedometer
-//        }
     }
 }
