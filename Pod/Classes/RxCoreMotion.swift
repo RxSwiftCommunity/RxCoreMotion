@@ -18,8 +18,7 @@ extension CMMotionManager {
             catch let e {
                 observer.on(.error(e))
             }
-            return AnonymousDisposable {
-            }
+            return Disposables.create()
         }.shareReplayLatestWhileConnected()
     }
 }
@@ -38,7 +37,7 @@ extension CMMotionManager {
             Observable.create { [weak self] observer in
                 guard let motionManager = self else {
                     observer.on(.completed)
-                    return NopDisposable.instance
+                    return Disposables.create()
                 }
 
                 motionManager.startAccelerometerUpdates(to: OperationQueue(), withHandler: { (data: CMAccelerometerData?, error: Error?) -> Void in
@@ -48,7 +47,7 @@ extension CMMotionManager {
                     observer.on(.next(data.acceleration))
                 })
 
-                return AnonymousDisposable {
+                return Disposables.create() {
                     motionManager.stopAccelerometerUpdates()
                 }
             }
@@ -61,7 +60,7 @@ extension CMMotionManager {
             Observable.create { [weak self] observer in
                 guard let motionManager = self else {
                     observer.on(.completed)
-                    return NopDisposable.instance
+                    return Disposables.create()
                 }
 
                 motionManager.startGyroUpdates(to: OperationQueue(), withHandler: { (data: CMGyroData?, error: Error?) -> Void in
@@ -71,7 +70,7 @@ extension CMMotionManager {
                     observer.on(.next(data.rotationRate))
                 })
 
-                return AnonymousDisposable {
+                return Disposables.create() {
                     motionManager.stopGyroUpdates()
                 }
             }
@@ -84,7 +83,7 @@ extension CMMotionManager {
             Observable.create { [weak self] observer in
                 guard let motionManager = self else {
                     observer.on(.completed)
-                    return NopDisposable.instance
+                    return Disposables.create()
                 }
 
                 motionManager.startMagnetometerUpdates(to: OperationQueue(), withHandler: { (data: CMMagnetometerData?, error: Error?) -> Void in
@@ -94,7 +93,7 @@ extension CMMotionManager {
                     observer.on(.next(data.magneticField))
                 })
 
-                return AnonymousDisposable {
+                return Disposables.create() {
                     motionManager.stopMagnetometerUpdates()
                 }
             }
@@ -107,7 +106,7 @@ extension CMMotionManager {
             Observable.create { [weak self] observer in
                 guard let motionManager = self else {
                     observer.on(.completed)
-                    return NopDisposable.instance
+                    return Disposables.create()
                 }
 
                 motionManager.startDeviceMotionUpdates(to: OperationQueue(), withHandler: { (data: CMDeviceMotion?, error: Error?) -> Void in
@@ -117,7 +116,7 @@ extension CMMotionManager {
                     observer.on(.next(data))
                 })
 
-                return AnonymousDisposable {
+                return Disposables.create() {
                     motionManager.stopDeviceMotionUpdates()
                 }
             }
@@ -149,7 +148,7 @@ extension CMPedometer {
                 
                 guard let pedometer:CMPedometer = self else {
                     observer.on(.completed)
-                    return NopDisposable.instance
+                    return Disposables.create()
                 }
                 pedometer.startUpdates(from: from, withHandler: {(data, error) in
                     guard let data = data else {
@@ -157,7 +156,7 @@ extension CMPedometer {
                     }
                     observer.on(.next(data))
                 })
-                return AnonymousDisposable {
+                return Disposables.create() {
                     pedometer.stopUpdates()
                     if #available(iOS 10.0, *) {
                         pedometer.stopEventUpdates()
@@ -175,7 +174,7 @@ extension CMPedometer {
                 
                 guard let pedometer:CMPedometer = self else {
                     observer.on(.completed)
-                    return NopDisposable.instance
+                    return Disposables.create()
                 }
                 pedometer.startUpdates(from: Date(), withHandler: {(data, error) in
                     guard let data = data else {
@@ -183,7 +182,7 @@ extension CMPedometer {
                     }
                     observer.on(.next(data))
                 })
-                return AnonymousDisposable {
+                return Disposables.create() {
                     pedometer.stopUpdates()
                     if #available(iOS 10.0, *) {
                         pedometer.stopEventUpdates()
