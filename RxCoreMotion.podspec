@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/*.swift'
 
-  s.frameworks = 'Foundation'
+  s.frameworks = 'Foundation', 'CoreMotion'
   s.dependency 'RxSwift'
 
 end
