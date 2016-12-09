@@ -127,7 +127,7 @@ extension CMMotionManager {
 
 
 extension CMMotionManager {
-    func memoize<D>(key: UnsafePointer<Void>, createLazily: () -> Observable<D>) -> Observable<D> {
+    func memoize<D>(key: UnsafeRawPointer, createLazily: () -> Observable<D>) -> Observable<D> {
         objc_sync_enter(self); defer { objc_sync_exit(self) }
 
         if let sequence = objc_getAssociatedObject(self, key) as? Observable<D> {
@@ -193,7 +193,7 @@ extension CMPedometer {
         }
     }
 
-    func memoize<D>(key: UnsafePointer<Void>, createLazily: () -> Observable<D>) -> Observable<D> {
+    func memoize<D>(key: UnsafeRawPointer, createLazily: () -> Observable<D>) -> Observable<D> {
         objc_sync_enter(self); defer { objc_sync_exit(self) }
 
         if let sequence = objc_getAssociatedObject(self, key) as? Observable<D> {

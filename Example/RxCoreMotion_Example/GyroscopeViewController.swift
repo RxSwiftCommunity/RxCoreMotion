@@ -30,8 +30,7 @@ class GyroscopeViewController: UIViewController {
                 manager.rotationRate ?? Observable.empty()
             }
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] rotationRate in
-                print(self)
+            .subscribe(onNext: { rotationRate in
                 print(rotationRate)
             })
             .addDisposableTo(disposeBag)

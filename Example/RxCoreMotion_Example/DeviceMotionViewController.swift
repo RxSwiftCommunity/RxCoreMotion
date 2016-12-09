@@ -30,8 +30,7 @@ class DeviceMotionViewController: UIViewController {
                 manager.acceleration ?? Observable.empty()
             }
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] deviceMotion in
-                print(self)
+            .subscribe(onNext: { deviceMotion in
                 print(deviceMotion)
             })
             .addDisposableTo(disposeBag)
