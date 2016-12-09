@@ -29,8 +29,7 @@ class MagnetometerViewController: UIViewController {
                 manager.magneticField ?? Observable.empty()
             }
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] magneticField in
-                print(self)
+            .subscribe(onNext: { magneticField in
                 print(magneticField)
             })
             .addDisposableTo(disposeBag)
