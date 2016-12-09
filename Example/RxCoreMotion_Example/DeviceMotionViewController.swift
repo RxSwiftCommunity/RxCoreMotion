@@ -12,31 +12,30 @@ import CoreMotion
 import RxCoreMotion
 
 class DeviceMotionViewController: UIViewController {
-    
+
     let disposeBag = DisposeBag()
     let coreMotionManager = CMMotionManager.rx_manager()
-    
+    let pedometerManager = CMPedometer()
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    
-    override func viewDidAppear(animated: Bool) {
+
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         coreMotionManager
             .flatMapLatest { manager in
                 manager.acceleration ?? Observable.empty()
             }
             .observeOn(MainScheduler.instance)
-            .subscribeNext { [weak self] deviceMotion in
+            .subscribe(onNext: { [weak self] deviceMotion in
                 print(self)
                 print(deviceMotion)
-            }
+            })
             .addDisposableTo(disposeBag)
-        
+
     }
-    
+
 }
-
-
