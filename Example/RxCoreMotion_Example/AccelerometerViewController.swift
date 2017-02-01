@@ -16,7 +16,7 @@ class AccelerometerViewController: UIViewController {
     @IBOutlet weak var grillageView: GrillageView!
     
     let disposeBag = DisposeBag()
-    let coreMotionManager = CMMotionManager.rx_manager()
+    let coreMotionManager = CMMotionManager.rx.manager()
 
     let circleView = RedCircleView()
     
