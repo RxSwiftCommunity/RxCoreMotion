@@ -14,7 +14,7 @@ import RxCoreMotion
 class GyroscopeViewController: UIViewController {
     
     let disposeBag = DisposeBag()
-    let coreMotionManager = CMMotionManager.rx_manager()
+    let coreMotionManager = CMMotionManager.rx.manager()
 
 
     override func viewDidLoad() {

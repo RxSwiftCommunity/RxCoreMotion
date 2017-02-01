@@ -14,7 +14,7 @@ import RxCoreMotion
 class MagnetometerViewController: UIViewController {
     
     let disposeBag = DisposeBag()
-    let coreMotionManager = CMMotionManager.rx_manager()
+    let coreMotionManager = CMMotionManager.rx.manager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
