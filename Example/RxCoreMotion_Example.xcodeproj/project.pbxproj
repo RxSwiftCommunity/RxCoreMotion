@@ -20,6 +20,12 @@
 		075D29E61CF39D22005DC06D /* MagnetometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D29E51CF39D22005DC06D /* MagnetometerViewController.swift */; };
 		075D29E81CF39D45005DC06D /* DeviceMotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D29E71CF39D45005DC06D /* DeviceMotionViewController.swift */; };
 		3590DF4C8191709DD36A2D04 /* Pods_RxCoreMotion_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38261AD32365B37A600AC37 /* Pods_RxCoreMotion_Tests.framework */; };
+		667B12F91E7BCACB001151C7 /* RxCoreMotion iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 667B12F71E7BCACB001151C7 /* RxCoreMotion iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		667B12FE1E7BCB06001151C7 /* RxCoreMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667B12FD1E7BCB06001151C7 /* RxCoreMotion.swift */; };
+		667B13011E7BCBE9001151C7 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B13001E7BCBE9001151C7 /* RxSwift.framework */; };
+		667B13051E7BCCC9001151C7 /* RxSwift.framework.dSYM in [Carthage] Copy dSYMS */ = {isa = PBXBuildFile; fileRef = 667B13041E7BCCC9001151C7 /* RxSwift.framework.dSYM */; };
+		667B13081E7BCE22001151C7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B13071E7BCE22001151C7 /* CoreMotion.framework */; };
+		667B130A1E7BCE28001151C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B13091E7BCE28001151C7 /* Foundation.framework */; };
 		C0894FD7F5522000EDC55B35 /* Pods_RxCoreMotion_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42441AC75A1935FC0EB707DB /* Pods_RxCoreMotion_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +38,20 @@
 			remoteInfo = RxCoreMotion_Example;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		667B13031E7BCCA9001151C7 /* [Carthage] Copy dSYMS */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				667B13051E7BCCC9001151C7 /* RxSwift.framework.dSYM in [Carthage] Copy dSYMS */,
+			);
+			name = "[Carthage] Copy dSYMS";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		01EF89E0743B2CEE209E997C /* Pods-RxCoreMotion_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCoreMotion_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxCoreMotion_Example/Pods-RxCoreMotion_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -52,6 +72,17 @@
 		075D29E51CF39D22005DC06D /* MagnetometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnetometerViewController.swift; sourceTree = "<group>"; };
 		075D29E71CF39D45005DC06D /* DeviceMotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceMotionViewController.swift; sourceTree = "<group>"; };
 		42441AC75A1935FC0EB707DB /* Pods_RxCoreMotion_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxCoreMotion_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		667B12F51E7BCACB001151C7 /* RxCoreMotion_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCoreMotion_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		667B12F71E7BCACB001151C7 /* RxCoreMotion iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RxCoreMotion iOS.h"; sourceTree = "<group>"; };
+		667B12F81E7BCACB001151C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		667B12FD1E7BCB06001151C7 /* RxCoreMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxCoreMotion.swift; path = ../Pod/Classes/RxCoreMotion.swift; sourceTree = "<group>"; };
+		667B13001E7BCBE9001151C7 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		667B13041E7BCCC9001151C7 /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxSwift.framework.dSYM; sourceTree = "<group>"; };
+		667B13071E7BCE22001151C7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		667B13091E7BCE28001151C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		667B131C1E7BCF24001151C7 /* RxCoreMotion_iOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RxCoreMotion_iOS copy-Info.plist"; path = "/work/personal/RxCoreMotion/Example/RxCoreMotion_iOS copy-Info.plist"; sourceTree = "<absolute>"; };
+		667B13241E7BCF51001151C7 /* RxCoreMotion_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxCoreMotion_macOS.h; sourceTree = "<group>"; };
+		667B13251E7BCF51001151C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757FDB696EC6AC09C28FB3B7 /* Pods-RxCoreMotion_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCoreMotion_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxCoreMotion_Example/Pods-RxCoreMotion_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AEC56E564FCB31F7D90B15DC /* Pods-RxCoreMotion_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCoreMotion_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxCoreMotion_Tests/Pods-RxCoreMotion_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C42F16B963E7D36F8EB9B5C2 /* Pods-RxCoreMotion_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCoreMotion_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxCoreMotion_Tests/Pods-RxCoreMotion_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,17 +106,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		667B12F11E7BCACB001151C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667B130A1E7BCE28001151C7 /* Foundation.framework in Frameworks */,
+				667B13081E7BCE22001151C7 /* CoreMotion.framework in Frameworks */,
+				667B13011E7BCBE9001151C7 /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		071AD59F1CF171850058C7ED = {
 			isa = PBXGroup;
 			children = (
+				667B12FF1E7BCBA2001151C7 /* Source */,
 				071AD5AA1CF171850058C7ED /* RxCoreMotion_Example */,
 				071AD5C21CF171A00058C7ED /* RxCoreMotion_Tests */,
+				667B12F61E7BCACB001151C7 /* RxCoreMotion iOS */,
+				667B13231E7BCF51001151C7 /* RxCoreMotion_macOS */,
 				071AD5A91CF171850058C7ED /* Products */,
 				DAD9B114B8957570E0A6EAE3 /* Pods */,
 				788EF9CBABF5068261AC6651 /* Frameworks */,
+				667B131C1E7BCF24001151C7 /* RxCoreMotion_iOS copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +139,7 @@
 			children = (
 				071AD5A81CF171850058C7ED /* RxCoreMotion_Example.app */,
 				071AD5C11CF171A00058C7ED /* RxCoreMotion_Tests.xctest */,
+				667B12F51E7BCACB001151C7 /* RxCoreMotion_iOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,9 +188,39 @@
 			name = ExamplesControllers;
 			sourceTree = "<group>";
 		};
+		667B12F61E7BCACB001151C7 /* RxCoreMotion iOS */ = {
+			isa = PBXGroup;
+			children = (
+				667B12F71E7BCACB001151C7 /* RxCoreMotion iOS.h */,
+				667B12F81E7BCACB001151C7 /* Info.plist */,
+			);
+			path = "RxCoreMotion iOS";
+			sourceTree = "<group>";
+		};
+		667B12FF1E7BCBA2001151C7 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				667B12FD1E7BCB06001151C7 /* RxCoreMotion.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		667B13231E7BCF51001151C7 /* RxCoreMotion_macOS */ = {
+			isa = PBXGroup;
+			children = (
+				667B13241E7BCF51001151C7 /* RxCoreMotion_macOS.h */,
+				667B13251E7BCF51001151C7 /* Info.plist */,
+			);
+			path = RxCoreMotion_macOS;
+			sourceTree = "<group>";
+		};
 		788EF9CBABF5068261AC6651 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				667B13091E7BCE28001151C7 /* Foundation.framework */,
+				667B13071E7BCE22001151C7 /* CoreMotion.framework */,
+				667B13041E7BCCC9001151C7 /* RxSwift.framework.dSYM */,
+				667B13001E7BCBE9001151C7 /* RxSwift.framework */,
 				42441AC75A1935FC0EB707DB /* Pods_RxCoreMotion_Example.framework */,
 				E38261AD32365B37A600AC37 /* Pods_RxCoreMotion_Tests.framework */,
 			);
@@ -163,6 +239,17 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		667B12F21E7BCACB001151C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667B12F91E7BCACB001151C7 /* RxCoreMotion iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		071AD5A71CF171850058C7ED /* RxCoreMotion_Example */ = {
@@ -206,6 +293,26 @@
 			productReference = 071AD5C11CF171A00058C7ED /* RxCoreMotion_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		667B12F41E7BCACB001151C7 /* RxCoreMotion_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 667B12FC1E7BCACB001151C7 /* Build configuration list for PBXNativeTarget "RxCoreMotion_iOS" */;
+			buildPhases = (
+				667B12F01E7BCACB001151C7 /* Sources */,
+				667B12F11E7BCACB001151C7 /* Frameworks */,
+				667B12F21E7BCACB001151C7 /* Headers */,
+				667B12F31E7BCACB001151C7 /* Resources */,
+				667B13061E7BCCF5001151C7 /* [Carthage] Copy Frameworks */,
+				667B13031E7BCCA9001151C7 /* [Carthage] Copy dSYMS */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxCoreMotion_iOS;
+			productName = "RxCoreMotion iOS";
+			productReference = 667B12F51E7BCACB001151C7 /* RxCoreMotion_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -225,6 +332,11 @@
 						LastSwiftMigration = 0800;
 						TestTargetID = 071AD5A71CF171850058C7ED;
 					};
+					667B12F41E7BCACB001151C7 = {
+						CreatedOnToolsVersion = 8.3;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 071AD5A31CF171850058C7ED /* Build configuration list for PBXProject "RxCoreMotion_Example" */;
@@ -242,6 +354,7 @@
 			targets = (
 				071AD5A71CF171850058C7ED /* RxCoreMotion_Example */,
 				071AD5C01CF171A00058C7ED /* RxCoreMotion_Tests */,
+				667B12F41E7BCACB001151C7 /* RxCoreMotion_iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -258,6 +371,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		071AD5BF1CF171A00058C7ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		667B12F31E7BCACB001151C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,6 +401,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotion_Example/Pods-RxCoreMotion_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		667B13061E7BCCF5001151C7 /* [Carthage] Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[Carthage] Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		8EE8319BCB59C5BB22BD83D1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -380,6 +514,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				071AD5C41CF171A00058C7ED /* RxCoreMotion_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		667B12F01E7BCACB001151C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667B12FE1E7BCB06001151C7 /* RxCoreMotion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +703,68 @@
 			};
 			name = Release;
 		};
+		667B12FA1E7BCACB001151C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "RxCoreMotion iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "rx.swift.RxCoreMotion-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		667B12FB1E7BCACB001151C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "RxCoreMotion iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "rx.swift.RxCoreMotion-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -590,6 +794,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		667B12FC1E7BCACB001151C7 /* Build configuration list for PBXNativeTarget "RxCoreMotion_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				667B12FA1E7BCACB001151C7 /* Debug */,
+				667B12FB1E7BCACB001151C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
