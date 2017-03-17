@@ -9,11 +9,9 @@
 #import <UIKit/UIKit.h>
 
 //! Project version number for RxCoreMotion iOS.
-FOUNDATION_EXPORT double RxCoreMotion_iOSVersionNumber;
+FOUNDATION_EXPORT double RxCoreMotionVersionNumber;
 
 //! Project version string for RxCoreMotion iOS.
-FOUNDATION_EXPORT const unsigned char RxCoreMotion_iOSVersionString[];
+FOUNDATION_EXPORT const unsigned char RxCoreMotionVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <RxCoreMotion_iOS/PublicHeader.h>
-
-
+// In this header, you should import all the public headers of your framework using statements like #import <RxCoreMotion/PublicHeader.h>

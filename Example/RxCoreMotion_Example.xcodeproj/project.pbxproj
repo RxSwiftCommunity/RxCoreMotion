@@ -80,7 +80,7 @@
 		667B13041E7BCCC9001151C7 /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxSwift.framework.dSYM; sourceTree = "<group>"; };
 		667B13071E7BCE22001151C7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		667B13091E7BCE28001151C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		667B131C1E7BCF24001151C7 /* RxCoreMotion_iOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RxCoreMotion_iOS copy-Info.plist"; path = "/work/personal/RxCoreMotion/Example/RxCoreMotion_iOS copy-Info.plist"; sourceTree = "<absolute>"; };
+		667B131C1E7BCF24001151C7 /* RxCoreMotion copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RxCoreMotion copy-Info.plist"; path = "/work/personal/RxCoreMotion/Example/RxCoreMotion copy-Info.plist"; sourceTree = "<absolute>"; };
 		667B13241E7BCF51001151C7 /* RxCoreMotion_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxCoreMotion_macOS.h; sourceTree = "<group>"; };
 		667B13251E7BCF51001151C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757FDB696EC6AC09C28FB3B7 /* Pods-RxCoreMotion_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCoreMotion_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxCoreMotion_Example/Pods-RxCoreMotion_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 				071AD5A91CF171850058C7ED /* Products */,
 				DAD9B114B8957570E0A6EAE3 /* Pods */,
 				788EF9CBABF5068261AC6651 /* Frameworks */,
-				667B131C1E7BCF24001151C7 /* RxCoreMotion_iOS copy-Info.plist */,
+				667B131C1E7BCF24001151C7 /* RxCoreMotion copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
