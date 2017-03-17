@@ -72,7 +72,7 @@
 		075D29E51CF39D22005DC06D /* MagnetometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnetometerViewController.swift; sourceTree = "<group>"; };
 		075D29E71CF39D45005DC06D /* DeviceMotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceMotionViewController.swift; sourceTree = "<group>"; };
 		42441AC75A1935FC0EB707DB /* Pods_RxCoreMotion_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxCoreMotion_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		667B12F51E7BCACB001151C7 /* RxCoreMotion_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCoreMotion_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		667B12F51E7BCACB001151C7 /* RxCoreMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCoreMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		667B12F71E7BCACB001151C7 /* RxCoreMotion iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RxCoreMotion iOS.h"; sourceTree = "<group>"; };
 		667B12F81E7BCACB001151C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		667B12FD1E7BCB06001151C7 /* RxCoreMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxCoreMotion.swift; path = ../Pod/Classes/RxCoreMotion.swift; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 			children = (
 				071AD5A81CF171850058C7ED /* RxCoreMotion_Example.app */,
 				071AD5C11CF171A00058C7ED /* RxCoreMotion_Tests.xctest */,
-				667B12F51E7BCACB001151C7 /* RxCoreMotion_iOS.framework */,
+				667B12F51E7BCACB001151C7 /* RxCoreMotion.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -293,9 +293,9 @@
 			productReference = 071AD5C11CF171A00058C7ED /* RxCoreMotion_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		667B12F41E7BCACB001151C7 /* RxCoreMotion_iOS */ = {
+		667B12F41E7BCACB001151C7 /* RxCoreMotion */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 667B12FC1E7BCACB001151C7 /* Build configuration list for PBXNativeTarget "RxCoreMotion_iOS" */;
+			buildConfigurationList = 667B12FC1E7BCACB001151C7 /* Build configuration list for PBXNativeTarget "RxCoreMotion" */;
 			buildPhases = (
 				667B12F01E7BCACB001151C7 /* Sources */,
 				667B12F11E7BCACB001151C7 /* Frameworks */,
@@ -308,9 +308,9 @@
 			);
 			dependencies = (
 			);
-			name = RxCoreMotion_iOS;
+			name = RxCoreMotion;
 			productName = "RxCoreMotion iOS";
-			productReference = 667B12F51E7BCACB001151C7 /* RxCoreMotion_iOS.framework */;
+			productReference = 667B12F51E7BCACB001151C7 /* RxCoreMotion.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -354,7 +354,7 @@
 			targets = (
 				071AD5A71CF171850058C7ED /* RxCoreMotion_Example */,
 				071AD5C01CF171A00058C7ED /* RxCoreMotion_Tests */,
-				667B12F41E7BCACB001151C7 /* RxCoreMotion_iOS */,
+				667B12F41E7BCACB001151C7 /* RxCoreMotion */,
 			);
 		};
 /* End PBXProject section */
@@ -723,7 +723,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "rx.swift.RxCoreMotion-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = rx.swift.RxCoreMotion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -755,7 +755,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "rx.swift.RxCoreMotion-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = rx.swift.RxCoreMotion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -795,7 +795,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		667B12FC1E7BCACB001151C7 /* Build configuration list for PBXNativeTarget "RxCoreMotion_iOS" */ = {
+		667B12FC1E7BCACB001151C7 /* Build configuration list for PBXNativeTarget "RxCoreMotion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				667B12FA1E7BCACB001151C7 /* Debug */,
