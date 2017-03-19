@@ -20,6 +20,16 @@ RxCoreMotion will be available through [CocoaPods](http://cocoapods.org). To ins
 pod "RxCoreMotion"
 ```
 
+#### Carthage
+
+Integrate `RxCoreMotion` with your `Cartfile` as folows:
+
+```ruby
+github "RxSwiftCommunity/RxCoreMotion"
+```
+
+Run `carthage update` to build the framework and drag the built `RxCoreMotion.framework` into your Xcode project.
+
 #### As Source
 
 You can grab the __RxCoreMotion.swift__ file from this repo and include it in your project.
