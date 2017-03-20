@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'RxCoreMotion'
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.summary          = 'An Rx wrapper of Apple iOS CoreMotion framework'
 
   s.description      = <<-DESC
