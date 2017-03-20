@@ -18,11 +18,8 @@ Pod::Spec.new do |s|
                        }
 
   s.requires_arc = true
-
   s.ios.deployment_target = '8.0'
-
   s.source_files = 'Pod/Classes/*.swift'
-
   s.frameworks = 'Foundation', 'CoreMotion'
   s.dependency 'RxSwift'
 
