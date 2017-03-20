@@ -17,7 +17,26 @@
 		07D678E11E7F82500013F645 /* MagnetometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D678D51E7F82500013F645 /* MagnetometerViewController.swift */; };
 		07D678E21E7F82500013F645 /* GrillageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D678D71E7F82500013F645 /* GrillageView.swift */; };
 		07D678E31E7F82500013F645 /* RedCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D678D81E7F82500013F645 /* RedCircleView.swift */; };
+		07D678FD1E7FAAF40013F645 /* RxCoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D678FB1E7FAAF40013F645 /* RxCoreMotion.framework */; };
+		07D678FE1E7FAB2F0013F645 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D678FA1E7FAAF40013F645 /* RxSwift.framework */; };
+		07D678FF1E7FAB2F0013F645 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D678FA1E7FAAF40013F645 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07D679021E7FAB330013F645 /* RxCoreMotion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D678FB1E7FAAF40013F645 /* RxCoreMotion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07D679001E7FAB2F0013F645 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07D678FF1E7FAB2F0013F645 /* RxSwift.framework in Embed Frameworks */,
+				07D679021E7FAB330013F645 /* RxCoreMotion.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		071AD5A81CF171850058C7ED /* RxCoreMotionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCoreMotionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +51,8 @@
 		07D678D51E7F82500013F645 /* MagnetometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnetometerViewController.swift; sourceTree = "<group>"; };
 		07D678D71E7F82500013F645 /* GrillageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrillageView.swift; sourceTree = "<group>"; };
 		07D678D81E7F82500013F645 /* RedCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedCircleView.swift; sourceTree = "<group>"; };
+		07D678FA1E7FAAF40013F645 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		07D678FB1E7FAAF40013F645 /* RxCoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCoreMotion.framework; path = Carthage/Build/iOS/RxCoreMotion.framework; sourceTree = "<group>"; };
 		667B13071E7BCE22001151C7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		667B13091E7BCE28001151C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -41,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D678FD1E7FAAF40013F645 /* RxCoreMotion.framework in Frameworks */,
+				07D678FE1E7FAB2F0013F645 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +124,8 @@
 		788EF9CBABF5068261AC6651 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07D678FA1E7FAAF40013F645 /* RxSwift.framework */,
+				07D678FB1E7FAAF40013F645 /* RxCoreMotion.framework */,
 				667B13091E7BCE28001151C7 /* Foundation.framework */,
 				667B13071E7BCE22001151C7 /* CoreMotion.framework */,
 			);
@@ -117,6 +142,7 @@
 				071AD5A41CF171850058C7ED /* Sources */,
 				071AD5A51CF171850058C7ED /* Frameworks */,
 				071AD5A61CF171850058C7ED /* Resources */,
+				07D679001E7FAB2F0013F645 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,6 +334,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2V65Z4JB29;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/RxCoreMotionExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rx.swift.RxCoreMotion-Example";
@@ -322,6 +352,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2V65Z4JB29;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/RxCoreMotionExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rx.swift.RxCoreMotion-Example";
