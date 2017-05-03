@@ -23,7 +23,7 @@ extension Reactive where Base: CMMotionManager {
 }
 
 var accelerationKey: UInt8  = 0
-var accelerometerData: UInt8  = 0
+var accelerometerDataKey: UInt8  = 0
 var rotationKey: UInt8      = 0
 var magneticFieldKey: UInt8 = 0
 var deviceMotionKey: UInt8  = 0
@@ -51,7 +51,7 @@ extension Reactive where Base: CMMotionManager {
     }
     
     public var accelerometerData: Observable<CMAccelerometerData> {
-        return memoize(key: &accelerationKey) {
+        return memoize(key: &accelerometerDataKey) {
             Observable.create { observer in
                 let motionManager = self.base
                 
