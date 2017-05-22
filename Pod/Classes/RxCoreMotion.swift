@@ -33,8 +33,10 @@ extension Reactive where Base: CMMotionManager {
         return memoize(key: &accelerationKey) {
             Observable.create { observer in
                 let motionManager = self.base
+                let operationQueue = OperationQueue()
+                operationQueue.maxConcurrentOperationCount = 1
                 
-                motionManager.startAccelerometerUpdates(to: OperationQueue(), withHandler: { (data: CMAccelerometerData?, error: Error?) -> Void in
+                motionManager.startAccelerometerUpdates(to: operationQueue, withHandler: { (data: CMAccelerometerData?, error: Error?) -> Void in
                     guard let data = data else {
                         return
                     }
@@ -53,8 +55,10 @@ extension Reactive where Base: CMMotionManager {
         return memoize(key: &rotationKey) {
             Observable.create { observer in
                 let motionManager = self.base
+                let operationQueue = OperationQueue()
+                operationQueue.maxConcurrentOperationCount = 1
                 
-                motionManager.startGyroUpdates(to: OperationQueue(), withHandler: { (data: CMGyroData?, error: Error?) -> Void in
+                motionManager.startGyroUpdates(to: operationQueue, withHandler: { (data: CMGyroData?, error: Error?) -> Void in
                     guard let data = data else {
                         return
                     }
@@ -73,8 +77,10 @@ extension Reactive where Base: CMMotionManager {
         return memoize(key: &magneticFieldKey) {
             Observable.create { observer in
                 let motionManager = self.base
+                let operationQueue = OperationQueue()
+                operationQueue.maxConcurrentOperationCount = 1
                 
-                motionManager.startMagnetometerUpdates(to: OperationQueue(), withHandler: { (data: CMMagnetometerData?, error: Error?) -> Void in
+                motionManager.startMagnetometerUpdates(to: operationQueue, withHandler: { (data: CMMagnetometerData?, error: Error?) -> Void in
                     guard let data = data else {
                         return
                     }
@@ -93,8 +99,10 @@ extension Reactive where Base: CMMotionManager {
         return memoize(key: &deviceMotionKey) {
             Observable.create { observer in
                 let motionManager = self.base
+                let operationQueue = OperationQueue()
+                operationQueue.maxConcurrentOperationCount = 1
                 
-                motionManager.startDeviceMotionUpdates(to: OperationQueue(), withHandler: { (data: CMDeviceMotion?, error: Error?) -> Void in
+                motionManager.startDeviceMotionUpdates(to: operationQueue, withHandler: { (data: CMDeviceMotion?, error: Error?) -> Void in
                     guard let data = data else {
                         return
                     }
