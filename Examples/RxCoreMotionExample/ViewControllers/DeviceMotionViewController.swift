@@ -27,7 +27,7 @@ class DeviceMotionViewController: UIViewController {
 
         coreMotionManager
             .flatMapLatest { manager in
-                manager.acceleration ?? Observable.empty()
+                manager.deviceMotion ?? Observable.empty()
             }
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { deviceMotion in
