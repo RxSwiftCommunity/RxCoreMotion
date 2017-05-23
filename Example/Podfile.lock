@@ -15,11 +15,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   RxCoreMotion:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
-  RxCoreMotion: 8d3e078872fd0b9acabd6fe4dfb9615c6ae4b3a0
+  RxCoreMotion: 9a2e971b5d122d7ac125cafa8dc3db10491f1ef2
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   RxTest: 9867e6f3c435af30fbdb44b6d8ec30b78c40b515
 
