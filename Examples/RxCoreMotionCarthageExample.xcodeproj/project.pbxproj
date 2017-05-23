@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07D678D91E7F82500013F645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D678CA1E7F82500013F645 /* AppDelegate.swift */; };
+		07D678DA1E7F82500013F645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D678CB1E7F82500013F645 /* Assets.xcassets */; };
+		07D678DB1E7F82500013F645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D678CC1E7F82500013F645 /* LaunchScreen.storyboard */; };
+		07D678DC1E7F82500013F645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D678CE1E7F82500013F645 /* Main.storyboard */; };
+		07D678DE1E7F82500013F645 /* AccelerometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D678D21E7F82500013F645 /* AccelerometerViewController.swift */; };
+		07D678DF1E7F82500013F645 /* DeviceMotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D678D31E7F82500013F645 /* DeviceMotionViewController.swift */; };
+		07D678E01E7F82500013F645 /* GyroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D678D41E7F82500013F645 /* GyroscopeViewController.swift */; };
+		07D678E11E7F82500013F645 /* MagnetometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D678D51E7F82500013F645 /* MagnetometerViewController.swift */; };
+		07D678E21E7F82500013F645 /* GrillageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D678D71E7F82500013F645 /* GrillageView.swift */; };
+		07D678E31E7F82500013F645 /* RedCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D678D81E7F82500013F645 /* RedCircleView.swift */; };
+		07D678FD1E7FAAF40013F645 /* RxCoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D678FB1E7FAAF40013F645 /* RxCoreMotion.framework */; };
+		07D678FE1E7FAB2F0013F645 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D678FA1E7FAAF40013F645 /* RxSwift.framework */; };
+		07D678FF1E7FAB2F0013F645 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D678FA1E7FAAF40013F645 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07D679021E7FAB330013F645 /* RxCoreMotion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D678FB1E7FAAF40013F645 /* RxCoreMotion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07D679001E7FAB2F0013F645 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07D678FF1E7FAB2F0013F645 /* RxSwift.framework in Embed Frameworks */,
+				07D679021E7FAB330013F645 /* RxCoreMotion.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		071AD5A81CF171850058C7ED /* RxCoreMotionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCoreMotionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07D678CA1E7F82500013F645 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		07D678CB1E7F82500013F645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07D678CD1E7F82500013F645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		07D678CF1E7F82500013F645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07D678D01E7F82500013F645 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07D678D21E7F82500013F645 /* AccelerometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerViewController.swift; sourceTree = "<group>"; };
+		07D678D31E7F82500013F645 /* DeviceMotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceMotionViewController.swift; sourceTree = "<group>"; };
+		07D678D41E7F82500013F645 /* GyroscopeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GyroscopeViewController.swift; sourceTree = "<group>"; };
+		07D678D51E7F82500013F645 /* MagnetometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnetometerViewController.swift; sourceTree = "<group>"; };
+		07D678D71E7F82500013F645 /* GrillageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrillageView.swift; sourceTree = "<group>"; };
+		07D678D81E7F82500013F645 /* RedCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedCircleView.swift; sourceTree = "<group>"; };
+		07D678FA1E7FAAF40013F645 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		07D678FB1E7FAAF40013F645 /* RxCoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCoreMotion.framework; path = Carthage/Build/iOS/RxCoreMotion.framework; sourceTree = "<group>"; };
+		667B13071E7BCE22001151C7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		667B13091E7BCE28001151C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		071AD5A51CF171850058C7ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07D678FD1E7FAAF40013F645 /* RxCoreMotion.framework in Frameworks */,
+				07D678FE1E7FAB2F0013F645 /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		071AD59F1CF171850058C7ED = {
+			isa = PBXGroup;
+			children = (
+				07D678C91E7F82500013F645 /* RxCoreMotionExample */,
+				071AD5A91CF171850058C7ED /* Products */,
+				788EF9CBABF5068261AC6651 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		071AD5A91CF171850058C7ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				071AD5A81CF171850058C7ED /* RxCoreMotionExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07D678C91E7F82500013F645 /* RxCoreMotionExample */ = {
+			isa = PBXGroup;
+			children = (
+				07D678CA1E7F82500013F645 /* AppDelegate.swift */,
+				07D678D11E7F82500013F645 /* ViewControllers */,
+				07D678D61E7F82500013F645 /* Views */,
+				07D678CB1E7F82500013F645 /* Assets.xcassets */,
+				07D678CC1E7F82500013F645 /* LaunchScreen.storyboard */,
+				07D678CE1E7F82500013F645 /* Main.storyboard */,
+				07D678D01E7F82500013F645 /* Info.plist */,
+			);
+			path = RxCoreMotionExample;
+			sourceTree = "<group>";
+		};
+		07D678D11E7F82500013F645 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				07D678D21E7F82500013F645 /* AccelerometerViewController.swift */,
+				07D678D31E7F82500013F645 /* DeviceMotionViewController.swift */,
+				07D678D41E7F82500013F645 /* GyroscopeViewController.swift */,
+				07D678D51E7F82500013F645 /* MagnetometerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		07D678D61E7F82500013F645 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07D678D71E7F82500013F645 /* GrillageView.swift */,
+				07D678D81E7F82500013F645 /* RedCircleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		788EF9CBABF5068261AC6651 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07D678FA1E7FAAF40013F645 /* RxSwift.framework */,
+				07D678FB1E7FAAF40013F645 /* RxCoreMotion.framework */,
+				667B13091E7BCE28001151C7 /* Foundation.framework */,
+				667B13071E7BCE22001151C7 /* CoreMotion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		071AD5A71CF171850058C7ED /* RxCoreMotionExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071AD5BA1CF171850058C7ED /* Build configuration list for PBXNativeTarget "RxCoreMotionExample" */;
+			buildPhases = (
+				071AD5A41CF171850058C7ED /* Sources */,
+				071AD5A51CF171850058C7ED /* Frameworks */,
+				071AD5A61CF171850058C7ED /* Resources */,
+				07D679001E7FAB2F0013F645 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxCoreMotionExample;
+			productName = RxCoreMotion_Example;
+			productReference = 071AD5A81CF171850058C7ED /* RxCoreMotionExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		071AD5A01CF171850058C7ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "RxSwiftCommunity - https://github.com/RxSwiftCommunity";
+				TargetAttributes = {
+					071AD5A71CF171850058C7ED = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2V65Z4JB29;
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 071AD5A31CF171850058C7ED /* Build configuration list for PBXProject "RxCoreMotionCarthageExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 071AD59F1CF171850058C7ED;
+			productRefGroup = 071AD5A91CF171850058C7ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				071AD5A71CF171850058C7ED /* RxCoreMotionExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		071AD5A61CF171850058C7ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07D678DC1E7F82500013F645 /* Main.storyboard in Resources */,
+				07D678DB1E7F82500013F645 /* LaunchScreen.storyboard in Resources */,
+				07D678DA1E7F82500013F645 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		071AD5A41CF171850058C7ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07D678D91E7F82500013F645 /* AppDelegate.swift in Sources */,
+				07D678E11E7F82500013F645 /* MagnetometerViewController.swift in Sources */,
+				07D678E21E7F82500013F645 /* GrillageView.swift in Sources */,
+				07D678E31E7F82500013F645 /* RedCircleView.swift in Sources */,
+				07D678DF1E7F82500013F645 /* DeviceMotionViewController.swift in Sources */,
+				07D678E01E7F82500013F645 /* GyroscopeViewController.swift in Sources */,
+				07D678DE1E7F82500013F645 /* AccelerometerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		07D678CC1E7F82500013F645 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07D678CD1E7F82500013F645 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		07D678CE1E7F82500013F645 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07D678CF1E7F82500013F645 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		071AD5B81CF171850058C7ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		071AD5B91CF171850058C7ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		071AD5BB1CF171850058C7ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2V65Z4JB29;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/RxCoreMotionExample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "rx.swift.RxCoreMotion-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		071AD5BC1CF171850058C7ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2V65Z4JB29;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/RxCoreMotionExample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "rx.swift.RxCoreMotion-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		071AD5A31CF171850058C7ED /* Build configuration list for PBXProject "RxCoreMotionCarthageExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071AD5B81CF171850058C7ED /* Debug */,
+				071AD5B91CF171850058C7ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		071AD5BA1CF171850058C7ED /* Build configuration list for PBXNativeTarget "RxCoreMotionExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071AD5BB1CF171850058C7ED /* Debug */,
+				071AD5BC1CF171850058C7ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 071AD5A01CF171850058C7ED /* Project object */;
+}
