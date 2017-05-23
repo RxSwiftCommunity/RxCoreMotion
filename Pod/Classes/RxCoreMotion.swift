@@ -56,8 +56,10 @@ extension Reactive where Base: CMMotionManager {
         return memoize(key: &accelerometerDataKey) {
             Observable.create { observer in
                 let motionManager = self.base
-                
-                motionManager.startAccelerometerUpdates(to: OperationQueue(), withHandler: { (data: CMAccelerometerData?, error: Error?) -> Void in
+                let operationQueue = OperationQueue()
+                operationQueue.maxConcurrentOperationCount = 1
+
+                motionManager.startAccelerometerUpdates(to: operationQueue, withHandler: { (data: CMAccelerometerData?, error: Error?) -> Void in
                     guard let data = data else {
                         return
                     }

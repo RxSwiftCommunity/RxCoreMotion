@@ -31,7 +31,10 @@ extension Reactive where Base: CMMotionActivityManager {
         return memoize(key: &motionActivityKey) {
             Observable.create { observer in
                 let activityManager = self.base
-                activityManager.startActivityUpdates(to: OperationQueue(), withHandler: { (data) in
+                let operationQueue = OperationQueue()
+                operationQueue.maxConcurrentOperationCount = 1
+
+                activityManager.startActivityUpdates(to: operationQueue, withHandler: { (data) in
                     guard let data = data else {
                         return
                     }
