@@ -31,10 +31,9 @@ class DeviceMotionViewController: UIViewController {
             }
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { deviceMotion in
-                print(deviceMotion)
+                print(deviceMotion.attitude)
             })
             .addDisposableTo(disposeBag)
-
     }
 
 }
