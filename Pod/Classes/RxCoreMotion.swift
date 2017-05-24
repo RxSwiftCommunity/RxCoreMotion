@@ -23,6 +23,7 @@ extension Reactive where Base: CMMotionManager {
 }
 
 var accelerationKey: UInt8  = 0
+var accelerometerDataKey: UInt8  = 0
 var rotationKey: UInt8      = 0
 var magneticFieldKey: UInt8 = 0
 var deviceMotionKey: UInt8  = 0
@@ -51,6 +52,28 @@ extension Reactive where Base: CMMotionManager {
         }
     }
     
+    public var accelerometerData: Observable<CMAccelerometerData> {
+        return memoize(key: &accelerometerDataKey) {
+            Observable.create { observer in
+                let motionManager = self.base
+                let operationQueue = OperationQueue()
+                operationQueue.maxConcurrentOperationCount = 1
+
+                motionManager.startAccelerometerUpdates(to: operationQueue, withHandler: { (data: CMAccelerometerData?, error: Error?) -> Void in
+                    guard let data = data else {
+                        return
+                    }
+                    observer.on(.next(data))
+                })
+                
+                return Disposables.create() {
+                    motionManager.stopAccelerometerUpdates()
+                }
+                }
+                .shareReplayLatestWhileConnected()
+        }
+    }
+
     public var rotationRate: Observable<CMRotationRate> {
         return memoize(key: &rotationKey) {
             Observable.create { observer in
@@ -198,6 +221,7 @@ extension Reactive where Base: CMPedometer {
 // If the current device supports one of the capabilities, observable sequence will not be nil
 public struct MotionManager {
     public let acceleration: Observable<CMAcceleration>?
+    public let accelerometerData: Observable<CMAccelerometerData>?
     public let rotationRate: Observable<CMRotationRate>?
     public let magneticField: Observable<CMMagneticField>?
     public let deviceMotion: Observable<CMDeviceMotion>?
@@ -205,9 +229,11 @@ public struct MotionManager {
     public init(motionManager: CMMotionManager) {
         if motionManager.isAccelerometerAvailable {
             self.acceleration = motionManager.rx.acceleration
+            self.accelerometerData = motionManager.rx.accelerometerData
         }
         else {
             self.acceleration = nil
+            self.accelerometerData = nil
         }
         
         if motionManager.isGyroAvailable {

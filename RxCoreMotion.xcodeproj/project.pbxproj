@@ -13,6 +13,7 @@
 		07D6786E1E7F6D080013F645 /* RxSwift.framework.dSYM in [Carthage] Copy dSYMS */ = {isa = PBXBuildFile; fileRef = 07D6786D1E7F6C4B0013F645 /* RxSwift.framework.dSYM */; };
 		667B13081E7BCE22001151C7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B13071E7BCE22001151C7 /* CoreMotion.framework */; };
 		667B130A1E7BCE28001151C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B13091E7BCE28001151C7 /* Foundation.framework */; };
+		79FD4AFA1ED4C03500B27328 /* MotionActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FD4AF91ED4C03500B27328 /* MotionActivityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,7 @@
 		667B12F51E7BCACB001151C7 /* RxCoreMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCoreMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		667B13071E7BCE22001151C7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		667B13091E7BCE28001151C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		79FD4AF91ED4C03500B27328 /* MotionActivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionActivityManager.swift; path = Pod/Classes/MotionActivityManager.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				07D678671E7F676C0013F645 /* RxCoreMotion.swift */,
+				79FD4AF91ED4C03500B27328 /* MotionActivityManager.swift */,
 			);
 			name = Classes;
 			path = ../Pod/Classes;
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79FD4AFA1ED4C03500B27328 /* MotionActivityManager.swift in Sources */,
 				07D678681E7F676C0013F645 /* RxCoreMotion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,4 +393,3 @@
 	};
 	rootObject = 071AD5A01CF171850058C7ED /* Project object */;
 }
-
