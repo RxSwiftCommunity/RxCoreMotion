@@ -20,7 +20,7 @@ extension Reactive where Base: CMMotionActivityManager {
                 observer.on(.error(e))
             }
             return Disposables.create()
-            }.shareReplayLatestWhileConnected()
+        }.share(replay: 1)
     }
 }
 
@@ -44,8 +44,7 @@ extension Reactive where Base: CMMotionActivityManager {
                 return Disposables.create() {
                     activityManager.stopActivityUpdates()
                 }
-                }
-                .shareReplayLatestWhileConnected()
+            }.share(replay: 1)
         }
     }
 }

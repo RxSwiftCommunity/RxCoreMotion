@@ -18,7 +18,7 @@ extension Reactive where Base: CMMotionManager {
                 observer.on(.error(e))
             }
             return Disposables.create()
-            }.shareReplayLatestWhileConnected()
+        }.share(replay: 1)
     }
 }
 
@@ -47,8 +47,7 @@ extension Reactive where Base: CMMotionManager {
                 return Disposables.create() {
                     motionManager.stopAccelerometerUpdates()
                 }
-                }
-                .shareReplayLatestWhileConnected()
+            }.share(replay: 1)
         }
     }
     
@@ -69,8 +68,7 @@ extension Reactive where Base: CMMotionManager {
                 return Disposables.create() {
                     motionManager.stopAccelerometerUpdates()
                 }
-                }
-                .shareReplayLatestWhileConnected()
+            }.share(replay: 1)
         }
     }
 
@@ -91,8 +89,7 @@ extension Reactive where Base: CMMotionManager {
                 return Disposables.create() {
                     motionManager.stopGyroUpdates()
                 }
-                }
-                .shareReplayLatestWhileConnected()
+            }.share(replay: 1)
         }
     }
     
@@ -113,8 +110,7 @@ extension Reactive where Base: CMMotionManager {
                 return Disposables.create() {
                     motionManager.stopMagnetometerUpdates()
                 }
-                }
-                .shareReplayLatestWhileConnected()
+            }.share(replay: 1)
         }
     }
     
@@ -135,8 +131,7 @@ extension Reactive where Base: CMMotionManager {
                 return Disposables.create() {
                     motionManager.stopDeviceMotionUpdates()
                 }
-                }
-                .shareReplayLatestWhileConnected()
+            }.share(replay: 1)
         }
     }
 }
@@ -175,8 +170,7 @@ extension Reactive where Base: CMPedometer {
                         pedometer.stopEventUpdates()
                     }
                 }
-                }
-                .shareReplayLatestWhileConnected()
+            }.share(replay: 1)
         }
     }
     
@@ -198,8 +192,7 @@ extension Reactive where Base: CMPedometer {
                         pedometer.stopEventUpdates()
                     }
                 }
-                }
-                .shareReplayLatestWhileConnected()
+            }.share(replay: 1)
         }
     }
     

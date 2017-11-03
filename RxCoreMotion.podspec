@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'RxCoreMotion'
-  s.version          = '1.2.1'
+  s.version          = '1.3.0'
   s.summary          = 'An Rx wrapper of Apple iOS CoreMotion framework'
 
   s.description      = <<-DESC
@@ -22,6 +22,6 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '3.0'
   s.source_files = 'Pod/Classes/*.swift'
   s.frameworks = 'Foundation', 'CoreMotion'
-  s.dependency 'RxSwift'
+  s.dependency 'RxSwift', '~> 4.0'
 
 end

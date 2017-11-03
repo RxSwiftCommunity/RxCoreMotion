@@ -33,7 +33,7 @@ class GyroscopeViewController: UIViewController {
             .subscribe(onNext: { rotationRate in
                 print(rotationRate)
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
         
     }
 

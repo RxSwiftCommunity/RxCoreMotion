@@ -33,7 +33,7 @@ class DeviceMotionViewController: UIViewController {
             .subscribe(onNext: { deviceMotion in
                 print(deviceMotion)
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
 
     }
 

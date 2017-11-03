@@ -46,7 +46,7 @@ class AccelerometerViewController: UIViewController {
                 
                 self?.circleView.center = CGPoint(x: xPos, y: yPos)
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
         
     }
     
