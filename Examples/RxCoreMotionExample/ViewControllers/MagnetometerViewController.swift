@@ -32,7 +32,7 @@ class MagnetometerViewController: UIViewController {
             .subscribe(onNext: { magneticField in
                 print(magneticField)
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
         
     }
     

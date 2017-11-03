@@ -5,7 +5,7 @@ platform :ios, '8.0'
 target 'RxCoreMotionExample' do
   use_frameworks!
 
-  pod 'RxSwift', '~> 3.3'
-  pod 'RxCocoa', '~> 3.3'
+  pod 'RxSwift', '~> 4.0'
+  pod 'RxCocoa', '~> 4.0'
   pod 'RxCoreMotion', :path => '../'
 end

@@ -1,24 +1,24 @@
 PODS:
-  - RxCocoa (3.3.1):
-    - RxSwift (~> 3.3)
-  - RxCoreMotion (1.1.1):
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxCoreMotion (1.2.1):
     - RxSwift
-  - RxSwift (3.3.1)
+  - RxSwift (4.0.0)
 
 DEPENDENCIES:
-  - RxCocoa (~> 3.3)
+  - RxCocoa (~> 4.0)
   - RxCoreMotion (from `../`)
-  - RxSwift (~> 3.3)
+  - RxSwift (~> 4.0)
 
 EXTERNAL SOURCES:
   RxCoreMotion:
     :path: ../
 
 SPEC CHECKSUMS:
-  RxCocoa: 7dcb7a1860fc9cd0e23dae67ab105fc2916670b6
-  RxCoreMotion: dd9bdc6cfc4e48a7042094a8483485424473913f
-  RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxCoreMotion: 05aae481dd41cbc4097d24567da9807fb639f004
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
 
-PODFILE CHECKSUM: a3392d808e573c153de6eee705efc0f1272a0e75
+PODFILE CHECKSUM: 1c20244579f5f8223318fd0a3b3a04c7f6d3ec32
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.3.1
