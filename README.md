@@ -20,7 +20,7 @@ RxCoreMotion will be available through [CocoaPods](http://cocoapods.org). To ins
 pod "RxCoreMotion"
 ```
 
-#### Carthage
+#### Carthage
 
 Integrate `RxCoreMotion` with your `Cartfile` as folows:
 
