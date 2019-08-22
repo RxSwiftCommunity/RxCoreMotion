@@ -153,6 +153,7 @@ extension Reactive where Base: CMMotionManager {
 }
 
 extension Reactive where Base: CMPedometer {
+    
     public func pedometer(from: Date! = Date()) -> Observable<CMPedometerData> {
         return memoize(key: &pedometerKey) {
             Observable.create { observer in
@@ -174,6 +175,23 @@ extension Reactive where Base: CMPedometer {
         }
     }
     
+    public func query(from fromDate:Date, to toDate:Date)->Single<CMPedometerData>{
+        return Single.create { observer in
+            let pedometer = self.base
+            pedometer.queryPedometerData(from: fromDate, to: toDate, withHandler: { (data, error) in
+                if let _ = error
+                {
+                    observer(.error(error!))
+                    return
+                }
+                guard let data = data else {
+                    return
+                }
+                observer(.success(data))
+            })
+            return Disposables.create {}
+        }
+    }
     
     public var pedometer: Observable<CMPedometerData> {
         return memoize(key: &pedometerKey) {

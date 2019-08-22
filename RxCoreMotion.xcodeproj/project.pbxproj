@@ -27,7 +27,7 @@
 		06A38EF2230EA977004CF703 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.3.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		06A38EF9230EABAB004CF703 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		06A38EFB230EABC9004CF703 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/watchOS/RxSwift.framework; sourceTree = "<group>"; };
-		06A38F19230EB60D004CF703 /* RxCoreMotion_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCoreMotion_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06A38F19230EB60D004CF703 /* RxCoreMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCoreMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A38F1B230EB60D004CF703 /* RxCoreMotion_watch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxCoreMotion_watch.h; sourceTree = "<group>"; };
 		06A38F1C230EB60D004CF703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06A38F24230EB65D004CF703 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -87,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				667B12F51E7BCACB001151C7 /* RxCoreMotion.framework */,
-				06A38F19230EB60D004CF703 /* RxCoreMotion_watchOS.framework */,
+				06A38F19230EB60D004CF703 /* RxCoreMotion.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,7 +160,7 @@
 			);
 			name = "RxCoreMotion-watchOS";
 			productName = "RxCoreMotion-watch";
-			productReference = 06A38F19230EB60D004CF703 /* RxCoreMotion_watchOS.framework */;
+			productReference = 06A38F19230EB60D004CF703 /* RxCoreMotion.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		667B12F41E7BCACB001151C7 /* RxCoreMotion */ = {
@@ -298,7 +298,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.poeta.RxCoreMotion-watchOS.RxCoreMotion-watch";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = RxCoreMotion;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
@@ -307,7 +307,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -346,7 +346,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.poeta.RxCoreMotion-watchOS.RxCoreMotion-watch";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = RxCoreMotion;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
@@ -354,7 +354,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
