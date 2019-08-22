@@ -7,62 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07D678661E7F67540013F645 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D678651E7F67540013F645 /* RxSwift.framework */; };
+		06A38EDE230EA8BC004CF703 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A38EDD230EA8BC004CF703 /* CoreMotion.framework */; };
+		06A38EFA230EABAB004CF703 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A38EF9230EABAB004CF703 /* RxSwift.framework */; };
+		06A38F1D230EB60D004CF703 /* RxCoreMotion_watch.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A38F1B230EB60D004CF703 /* RxCoreMotion_watch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06A38F21230EB618004CF703 /* RxCoreMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D678671E7F676C0013F645 /* RxCoreMotion.swift */; };
+		06A38F22230EB61B004CF703 /* MotionActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FD4AF91ED4C03500B27328 /* MotionActivityManager.swift */; };
+		06A38F23230EB64D004CF703 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A38EF2230EA977004CF703 /* CoreMotion.framework */; };
+		06A38F25230EB65D004CF703 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A38F24230EB65D004CF703 /* Foundation.framework */; };
+		06A38F27230EB681004CF703 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A38EFB230EABC9004CF703 /* RxSwift.framework */; };
+		06A38F29230EB68B004CF703 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A38F24230EB65D004CF703 /* Foundation.framework */; };
 		07D678681E7F676C0013F645 /* RxCoreMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D678671E7F676C0013F645 /* RxCoreMotion.swift */; };
 		07D6786C1E7F67B10013F645 /* RxCoreMotion.h in Headers */ = {isa = PBXBuildFile; fileRef = 07D6786B1E7F67940013F645 /* RxCoreMotion.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07D6786E1E7F6D080013F645 /* RxSwift.framework.dSYM in [Carthage] Copy dSYMS */ = {isa = PBXBuildFile; fileRef = 07D6786D1E7F6C4B0013F645 /* RxSwift.framework.dSYM */; };
-		667B13081E7BCE22001151C7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B13071E7BCE22001151C7 /* CoreMotion.framework */; };
-		667B130A1E7BCE28001151C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B13091E7BCE28001151C7 /* Foundation.framework */; };
 		79FD4AFA1ED4C03500B27328 /* MotionActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FD4AF91ED4C03500B27328 /* MotionActivityManager.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		667B13031E7BCCA9001151C7 /* [Carthage] Copy dSYMS */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				07D6786E1E7F6D080013F645 /* RxSwift.framework.dSYM in [Carthage] Copy dSYMS */,
-			);
-			name = "[Carthage] Copy dSYMS";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		07D678651E7F67540013F645 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		06A38ECD230E832D004CF703 /* RxCoreMotion copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RxCoreMotion copy-Info.plist"; path = "/Users/installpoeta/Projects/Fork/CoreMotionWatchos/RxCoreMotion copy-Info.plist"; sourceTree = "<absolute>"; };
+		06A38EDD230EA8BC004CF703 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		06A38EF2230EA977004CF703 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.3.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		06A38EF9230EABAB004CF703 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		06A38EFB230EABC9004CF703 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/watchOS/RxSwift.framework; sourceTree = "<group>"; };
+		06A38F19230EB60D004CF703 /* RxCoreMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCoreMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06A38F1B230EB60D004CF703 /* RxCoreMotion_watch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxCoreMotion_watch.h; sourceTree = "<group>"; };
+		06A38F1C230EB60D004CF703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06A38F24230EB65D004CF703 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		07D678671E7F676C0013F645 /* RxCoreMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxCoreMotion.swift; path = Pod/Classes/RxCoreMotion.swift; sourceTree = SOURCE_ROOT; };
 		07D6786A1E7F67940013F645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07D6786B1E7F67940013F645 /* RxCoreMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxCoreMotion.h; sourceTree = "<group>"; };
-		07D6786D1E7F6C4B0013F645 /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxSwift.framework.dSYM; path = Carthage/Build/iOS/RxSwift.framework.dSYM; sourceTree = "<group>"; };
 		667B12F51E7BCACB001151C7 /* RxCoreMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCoreMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		667B13071E7BCE22001151C7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		667B13091E7BCE28001151C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		79FD4AF91ED4C03500B27328 /* MotionActivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionActivityManager.swift; path = Pod/Classes/MotionActivityManager.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		06A38F16230EB60D004CF703 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06A38F25230EB65D004CF703 /* Foundation.framework in Frameworks */,
+				06A38F23230EB64D004CF703 /* CoreMotion.framework in Frameworks */,
+				06A38F27230EB681004CF703 /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		667B12F11E7BCACB001151C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				667B130A1E7BCE28001151C7 /* Foundation.framework in Frameworks */,
-				667B13081E7BCE22001151C7 /* CoreMotion.framework in Frameworks */,
-				07D678661E7F67540013F645 /* RxSwift.framework in Frameworks */,
+				06A38EDE230EA8BC004CF703 /* CoreMotion.framework in Frameworks */,
+				06A38F29230EB68B004CF703 /* Foundation.framework in Frameworks */,
+				06A38EFA230EABAB004CF703 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06A38F1A230EB60D004CF703 /* RxCoreMotion-watch */ = {
+			isa = PBXGroup;
+			children = (
+				06A38F1B230EB60D004CF703 /* RxCoreMotion_watch.h */,
+				06A38F1C230EB60D004CF703 /* Info.plist */,
+			);
+			path = "RxCoreMotion-watch";
+			sourceTree = "<group>";
+		};
 		071AD59F1CF171850058C7ED = {
 			isa = PBXGroup;
 			children = (
 				07D678621E7F64790013F645 /* Classes */,
 				07D678691E7F67940013F645 /* RxCoreMotion */,
+				06A38F1A230EB60D004CF703 /* RxCoreMotion-watch */,
 				071AD5A91CF171850058C7ED /* Products */,
 				788EF9CBABF5068261AC6651 /* Frameworks */,
+				06A38ECD230E832D004CF703 /* RxCoreMotion copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				667B12F51E7BCACB001151C7 /* RxCoreMotion.framework */,
+				06A38F19230EB60D004CF703 /* RxCoreMotion.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,10 +114,11 @@
 		788EF9CBABF5068261AC6651 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				07D6786D1E7F6C4B0013F645 /* RxSwift.framework.dSYM */,
-				07D678651E7F67540013F645 /* RxSwift.framework */,
-				667B13071E7BCE22001151C7 /* CoreMotion.framework */,
-				667B13091E7BCE28001151C7 /* Foundation.framework */,
+				06A38F24230EB65D004CF703 /* Foundation.framework */,
+				06A38EF9230EABAB004CF703 /* RxSwift.framework */,
+				06A38EFB230EABC9004CF703 /* RxSwift.framework */,
+				06A38EDD230EA8BC004CF703 /* CoreMotion.framework */,
+				06A38EF2230EA977004CF703 /* CoreMotion.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +126,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		06A38F14230EB60D004CF703 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06A38F1D230EB60D004CF703 /* RxCoreMotion_watch.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		667B12F21E7BCACB001151C7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,6 +145,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		06A38F18230EB60D004CF703 /* RxCoreMotion-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06A38F20230EB60D004CF703 /* Build configuration list for PBXNativeTarget "RxCoreMotion-watchOS" */;
+			buildPhases = (
+				06A38F14230EB60D004CF703 /* Headers */,
+				06A38F15230EB60D004CF703 /* Sources */,
+				06A38F16230EB60D004CF703 /* Frameworks */,
+				06A38F17230EB60D004CF703 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RxCoreMotion-watchOS";
+			productName = "RxCoreMotion-watch";
+			productReference = 06A38F19230EB60D004CF703 /* RxCoreMotion.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		667B12F41E7BCACB001151C7 /* RxCoreMotion */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 667B12FC1E7BCACB001151C7 /* Build configuration list for PBXNativeTarget "RxCoreMotion" */;
@@ -126,8 +171,6 @@
 				667B12F11E7BCACB001151C7 /* Frameworks */,
 				667B12F21E7BCACB001151C7 /* Headers */,
 				667B12F31E7BCACB001151C7 /* Resources */,
-				667B13061E7BCCF5001151C7 /* [Carthage] Copy Frameworks */,
-				667B13031E7BCCA9001151C7 /* [Carthage] Copy dSYMS */,
 			);
 			buildRules = (
 			);
@@ -148,6 +191,11 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "RxSwiftCommunity - https://github.com/RxSwiftCommunity";
 				TargetAttributes = {
+					06A38F18230EB60D004CF703 = {
+						CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = YJF5HM76T5;
+						ProvisioningStyle = Automatic;
+					};
 					667B12F41E7BCACB001151C7 = {
 						CreatedOnToolsVersion = 8.3;
 						LastSwiftMigration = 0830;
@@ -160,6 +208,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -169,11 +218,19 @@
 			projectRoot = "";
 			targets = (
 				667B12F41E7BCACB001151C7 /* RxCoreMotion */,
+				06A38F18230EB60D004CF703 /* RxCoreMotion-watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		06A38F17230EB60D004CF703 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		667B12F31E7BCACB001151C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,24 +240,16 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		667B13061E7BCCF5001151C7 /* [Carthage] Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
+/* Begin PBXSourcesBuildPhase section */
+		06A38F15230EB60D004CF703 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputPaths = (
-			);
-			name = "[Carthage] Copy Frameworks";
-			outputPaths = (
+				06A38F21230EB618004CF703 /* RxCoreMotion.swift in Sources */,
+				06A38F22230EB61B004CF703 /* MotionActivityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
 		667B12F01E7BCACB001151C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +262,102 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		06A38F1E230EB60D004CF703 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YJF5HM76T5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "RxCoreMotion-watch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.poeta.RxCoreMotion-watchOS.RxCoreMotion-watch";
+				PRODUCT_NAME = RxCoreMotion;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		06A38F1F230EB60D004CF703 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YJF5HM76T5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "RxCoreMotion-watch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.poeta.RxCoreMotion-watchOS.RxCoreMotion-watch";
+				PRODUCT_NAME = RxCoreMotion;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
 		071AD5B81CF171850058C7ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -256,8 +401,11 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -297,9 +445,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -327,11 +478,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rx.swift.RxCoreMotion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7s armv7 arm64e arm64";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -360,9 +514,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rx.swift.RxCoreMotion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7s armv7 arm64e arm64";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -371,6 +528,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		06A38F20230EB60D004CF703 /* Build configuration list for PBXNativeTarget "RxCoreMotion-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06A38F1E230EB60D004CF703 /* Debug */,
+				06A38F1F230EB60D004CF703 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		071AD5A31CF171850058C7ED /* Build configuration list for PBXProject "RxCoreMotion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
