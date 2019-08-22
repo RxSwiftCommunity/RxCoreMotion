@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "06A38EDF230EA8CD004CF703"
-               BuildableName = "RxCoreMotion-watchOS.framework"
+               BlueprintIdentifier = "06A38F18230EB60D004CF703"
+               BuildableName = "RxCoreMotion_watchOS.framework"
                BlueprintName = "RxCoreMotion-watchOS"
                ReferencedContainer = "container:RxCoreMotion.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "06A38EDF230EA8CD004CF703"
-            BuildableName = "RxCoreMotion-watchOS.framework"
+            BlueprintIdentifier = "06A38F18230EB60D004CF703"
+            BuildableName = "RxCoreMotion_watchOS.framework"
             BlueprintName = "RxCoreMotion-watchOS"
             ReferencedContainer = "container:RxCoreMotion.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "06A38EDF230EA8CD004CF703"
-            BuildableName = "RxCoreMotion-watchOS.framework"
+            BlueprintIdentifier = "06A38F18230EB60D004CF703"
+            BuildableName = "RxCoreMotion_watchOS.framework"
             BlueprintName = "RxCoreMotion-watchOS"
             ReferencedContainer = "container:RxCoreMotion.xcodeproj">
          </BuildableReference>
