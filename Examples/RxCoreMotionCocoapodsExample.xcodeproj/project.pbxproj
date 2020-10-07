@@ -135,7 +135,6 @@
 				071AD5A51CF171850058C7ED /* Frameworks */,
 				071AD5A61CF171850058C7ED /* Resources */,
 				656345A9AA28B7371CBD0109 /* [CP] Embed Pods Frameworks */,
-				D2FFF0E3C32D1D92056D8A90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,35 +200,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotionExample/Pods-RxCoreMotionExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-RxCoreMotionExample/Pods-RxCoreMotionExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCoreMotion/RxCoreMotion.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCoreMotion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotionExample/Pods-RxCoreMotionExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D2FFF0E3C32D1D92056D8A90 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxCoreMotionExample/Pods-RxCoreMotionExample-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxCoreMotionExample/Pods-RxCoreMotionExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D94C429B3822B11B00528827 /* [CP] Check Pods Manifest.lock */ = {
