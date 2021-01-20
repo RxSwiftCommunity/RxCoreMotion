@@ -1,7 +1,7 @@
 PODS:
   - RxCoreMotion (1.4.0):
-    - RxSwift (= 6.0.0-rc.1)
-  - RxSwift (6.0.0-rc.1)
+    - RxSwift (= 6.0.0)
+  - RxSwift (6.0.0)
 
 DEPENDENCIES:
   - RxCoreMotion (from `../`)
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RxCoreMotion: d96fdffd3d6e3784a7a399f1d8c85ffc28096ab9
-  RxSwift: dae1a32c48148897494b9e2a6b00a68b40694236
+  RxCoreMotion: 42275cff40fc60740c730f91c6af8ab256df6bd7
+  RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
 
-PODFILE CHECKSUM: 4c9a79fbef7484530d33f50c8f2cfa8b4ec2a229
+PODFILE CHECKSUM: 8009eb6842bc3edb0b23209a4a6ddd4643c6fded
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

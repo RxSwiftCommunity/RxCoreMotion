@@ -22,6 +22,6 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '3.0'
   s.source_files = 'Pod/Classes/*.swift'
   s.frameworks = 'Foundation', 'CoreMotion'
-  s.dependency 'RxSwift', '6.0.0-rc.1'
+  s.dependency 'RxSwift', '6.0.0'
 
 end
